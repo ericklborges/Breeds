@@ -151,6 +151,7 @@
 				3748872124D75B52003A2F4C /* Resources */,
 				37A0EBAA24D8CBCE00D95F7C /* Carthage */,
 				3711A07424D8D7340072A231 /* Swift Lint */,
+				3711A07624D8E6850072A231 /* Build Secrets Property List */,
 			);
 			buildRules = (
 			);
@@ -282,6 +283,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/zsh;
 			shellScript = "#!/bin/bash\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo -e \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint, or simbly \\\"$ brew install swiftlint\\\"\"\nfi\n";
+		};
+		3711A07624D8E6850072A231 /* Build Secrets Property List */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build Secrets Property List";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/zsh;
+			shellScript = "# checks if Secrets.plist exists before running\nif ! [ -f ${SRCROOT}/Breeds/Secrets.plist ]; then\n    echo \"error: Please run the command BuildSecretsPlist from the Source file of the project. It will create a .plist file with the required secrets needed to run the project.\"\n    exit 1 \nfi\n";
 		};
 		37A0EBAA24D8CBCE00D95F7C /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
