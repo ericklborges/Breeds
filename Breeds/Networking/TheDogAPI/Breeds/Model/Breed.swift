@@ -8,8 +8,6 @@
 
 import Foundation
 
-typealias Breeds = [Breed]
-
 struct Breed: Codable {
     let weight: Dimension
     let height: Dimension

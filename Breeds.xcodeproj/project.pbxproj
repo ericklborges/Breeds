@@ -13,6 +13,8 @@
 		3711A07224D8D46A0072A231 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A0EBB124D8D07000D95F7C /* Quick.framework */; };
 		373EA9D524DCC0B800A2F236 /* TheDogAPIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE2BD824DB6677000590C6 /* TheDogAPIConfig.swift */; };
 		373EA9D624DCC0C800A2F236 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37EE2BD424DB6623000590C6 /* Secrets.plist */; };
+		373EA9DC24DCC22D00A2F236 /* ImagesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373EA9DB24DCC22D00A2F236 /* ImagesAPI.swift */; };
+		373EA9DE24DCC29B00A2F236 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373EA9DD24DCC29B00A2F236 /* Images.swift */; };
 		3744774724DB776900D90286 /* Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744774624DB776900D90286 /* Plist.swift */; };
 		3744774B24DB783600D90286 /* BreedsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744774A24DB783600D90286 /* BreedsAPI.swift */; };
 		3744774F24DB969200D90286 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744774E24DB969200D90286 /* Breed.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		373EA9DB24DCC22D00A2F236 /* ImagesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesAPI.swift; sourceTree = "<group>"; };
+		373EA9DD24DCC29B00A2F236 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		3744774624DB776900D90286 /* Plist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plist.swift; sourceTree = "<group>"; };
 		3744774A24DB783600D90286 /* BreedsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsAPI.swift; sourceTree = "<group>"; };
 		3744774E24DB969200D90286 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
@@ -91,6 +95,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		373EA9D724DCC18E00A2F236 /* TheDogAPI */ = {
+			isa = PBXGroup;
+			children = (
+				37EE2BD824DB6677000590C6 /* TheDogAPIConfig.swift */,
+				3744774C24DB967A00D90286 /* Breeds */,
+				373EA9D824DCC1C200A2F236 /* Images */,
+			);
+			path = TheDogAPI;
+			sourceTree = "<group>";
+		};
+		373EA9D824DCC1C200A2F236 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				373EA9D924DCC1D700A2F236 /* API */,
+				373EA9DA24DCC1DB00A2F236 /* Model */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		373EA9D924DCC1D700A2F236 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				373EA9DB24DCC22D00A2F236 /* ImagesAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		373EA9DA24DCC1DB00A2F236 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				373EA9DD24DCC29B00A2F236 /* Images.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3744774524DB775500D90286 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,14 +145,6 @@
 				3748872824D75B52003A2F4C /* SceneDelegate.swift */,
 			);
 			path = Application;
-			sourceTree = "<group>";
-		};
-		3744774924DB77DA00D90286 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				37EE2BD824DB6677000590C6 /* TheDogAPIConfig.swift */,
-			);
-			path = Sources;
 			sourceTree = "<group>";
 		};
 		3744774C24DB967A00D90286 /* Breeds */ = {
@@ -204,8 +235,7 @@
 		37EE2BD724DB664D000590C6 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				3744774924DB77DA00D90286 /* Sources */,
-				3744774C24DB967A00D90286 /* Breeds */,
+				373EA9D724DCC18E00A2F236 /* TheDogAPI */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -411,7 +441,9 @@
 			files = (
 				373EA9D524DCC0B800A2F236 /* TheDogAPIConfig.swift in Sources */,
 				3744774724DB776900D90286 /* Plist.swift in Sources */,
+				373EA9DC24DCC22D00A2F236 /* ImagesAPI.swift in Sources */,
 				3744774F24DB969200D90286 /* Breed.swift in Sources */,
+				373EA9DE24DCC29B00A2F236 /* Images.swift in Sources */,
 				3748872B24D75B52003A2F4C /* ViewController.swift in Sources */,
 				3748872724D75B52003A2F4C /* AppDelegate.swift in Sources */,
 				3748872924D75B52003A2F4C /* SceneDelegate.swift in Sources */,

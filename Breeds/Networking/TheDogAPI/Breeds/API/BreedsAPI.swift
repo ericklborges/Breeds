@@ -10,7 +10,7 @@ import Alamofire
 import Foundation
 
 class BreedsAPI {
-    func fetchBreeds(limit: Int, page: Int, completion: @escaping(DataResponse<Breeds, AFError>) -> Void) {
+    func fetchBreeds(limit: Int, page: Int, completion: @escaping(DataResponse<[Breed], AFError>) -> Void) {
         let path = TheDogAPISources.baseUrl + "/v1/breeds"
         let header = HTTPHeaders(TheDogAPISources.authHeader)
         
@@ -20,6 +20,6 @@ class BreedsAPI {
         ]
         
         AF.request(path, method: .get, parameters: parameters, headers: header)
-            .responseDecodable(of: Breeds.self, completionHandler: completion)
+            .responseDecodable(of: [Breed].self, completionHandler: completion)
     }
 }
