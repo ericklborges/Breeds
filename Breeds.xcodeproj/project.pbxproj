@@ -11,7 +11,11 @@
 		3711A07024D8D46A0072A231 /* Nimble_Snapshots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A0EBB524D8D07000D95F7C /* Nimble_Snapshots.framework */; };
 		3711A07124D8D46A0072A231 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A0EBB324D8D07000D95F7C /* Nimble.framework */; };
 		3711A07224D8D46A0072A231 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A0EBB124D8D07000D95F7C /* Quick.framework */; };
+		373EA9D524DCC0B800A2F236 /* TheDogAPIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE2BD824DB6677000590C6 /* TheDogAPIConfig.swift */; };
+		373EA9D624DCC0C800A2F236 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37EE2BD424DB6623000590C6 /* Secrets.plist */; };
 		3744774724DB776900D90286 /* Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744774624DB776900D90286 /* Plist.swift */; };
+		3744774B24DB783600D90286 /* BreedsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744774A24DB783600D90286 /* BreedsAPI.swift */; };
+		3744774F24DB969200D90286 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744774E24DB969200D90286 /* Breed.swift */; };
 		3748872724D75B52003A2F4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748872624D75B52003A2F4C /* AppDelegate.swift */; };
 		3748872924D75B52003A2F4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748872824D75B52003A2F4C /* SceneDelegate.swift */; };
 		3748872B24D75B52003A2F4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748872A24D75B52003A2F4C /* ViewController.swift */; };
@@ -36,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		3744774624DB776900D90286 /* Plist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plist.swift; sourceTree = "<group>"; };
+		3744774A24DB783600D90286 /* BreedsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsAPI.swift; sourceTree = "<group>"; };
+		3744774E24DB969200D90286 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		3748872324D75B52003A2F4C /* Breeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breeds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3748872624D75B52003A2F4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3748872824D75B52003A2F4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +62,8 @@
 		37A0EBB524D8D07000D95F7C /* Nimble_Snapshots.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble_Snapshots.framework; path = Carthage/Build/iOS/Nimble_Snapshots.framework; sourceTree = "<group>"; };
 		37A0EBB624D8D07000D95F7C /* Yams.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Yams.framework; path = Carthage/Build/iOS/Yams.framework; sourceTree = "<group>"; };
 		37A0EBB724D8D07000D95F7C /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSnapshotTestCase.framework; path = Carthage/Build/iOS/FBSnapshotTestCase.framework; sourceTree = "<group>"; };
+		37EE2BD424DB6623000590C6 /* Secrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
+		37EE2BD824DB6677000590C6 /* TheDogAPIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheDogAPIConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,39 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		3744774924DB77DA00D90286 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				37EE2BD824DB6677000590C6 /* TheDogAPIConfig.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		3744774C24DB967A00D90286 /* Breeds */ = {
+			isa = PBXGroup;
+			children = (
+				3744775224DB972700D90286 /* API */,
+				3744774D24DB968300D90286 /* Model */,
+			);
+			path = Breeds;
+			sourceTree = "<group>";
+		};
+		3744774D24DB968300D90286 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3744774E24DB969200D90286 /* Breed.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3744775224DB972700D90286 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				3744774A24DB783600D90286 /* BreedsAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		3748871A24D75B52003A2F4C = {
 			isa = PBXGroup;
 			children = (
@@ -122,13 +163,15 @@
 		3748872524D75B52003A2F4C /* Breeds */ = {
 			isa = PBXGroup;
 			children = (
-				3748872624D75B52003A2F4C /* AppDelegate.swift */,
-				3748872824D75B52003A2F4C /* SceneDelegate.swift */,
-				3748872A24D75B52003A2F4C /* ViewController.swift */,
-				3748872C24D75B52003A2F4C /* Main.storyboard */,
-				3748872F24D75B54003A2F4C /* Assets.xcassets */,
-				3748873124D75B54003A2F4C /* LaunchScreen.storyboard */,
 				3748873424D75B54003A2F4C /* Info.plist */,
+				37EE2BD424DB6623000590C6 /* Secrets.plist */,
+				3748872A24D75B52003A2F4C /* ViewController.swift */,
+				3748872F24D75B54003A2F4C /* Assets.xcassets */,
+				3744774824DB778200D90286 /* Application */,
+				37EE2BD724DB664D000590C6 /* Networking */,
+				3748873124D75B54003A2F4C /* LaunchScreen.storyboard */,
+				3748872C24D75B52003A2F4C /* Main.storyboard */,
+				3744774524DB775500D90286 /* Utils */,
 			);
 			path = Breeds;
 			sourceTree = "<group>";
@@ -156,6 +199,15 @@
 				37A0EBAC24D8D04C00D95F7C /* Alamofire.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		37EE2BD724DB664D000590C6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3744774924DB77DA00D90286 /* Sources */,
+				3744774C24DB967A00D90286 /* Breeds */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +295,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				373EA9D624DCC0C800A2F236 /* Secrets.plist in Resources */,
 				3748873324D75B54003A2F4C /* LaunchScreen.storyboard in Resources */,
 				3748873024D75B54003A2F4C /* Assets.xcassets in Resources */,
 				3748872E24D75B52003A2F4C /* Main.storyboard in Resources */,
@@ -356,10 +409,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				373EA9D524DCC0B800A2F236 /* TheDogAPIConfig.swift in Sources */,
 				3744774724DB776900D90286 /* Plist.swift in Sources */,
+				3744774F24DB969200D90286 /* Breed.swift in Sources */,
 				3748872B24D75B52003A2F4C /* ViewController.swift in Sources */,
 				3748872724D75B52003A2F4C /* AppDelegate.swift in Sources */,
 				3748872924D75B52003A2F4C /* SceneDelegate.swift in Sources */,
+				3744774B24DB783600D90286 /* BreedsAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
