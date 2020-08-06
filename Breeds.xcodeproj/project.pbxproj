@@ -11,6 +11,7 @@
 		3711A07024D8D46A0072A231 /* Nimble_Snapshots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A0EBB524D8D07000D95F7C /* Nimble_Snapshots.framework */; };
 		3711A07124D8D46A0072A231 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A0EBB324D8D07000D95F7C /* Nimble.framework */; };
 		3711A07224D8D46A0072A231 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A0EBB124D8D07000D95F7C /* Quick.framework */; };
+		3744774724DB776900D90286 /* Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744774624DB776900D90286 /* Plist.swift */; };
 		3748872724D75B52003A2F4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748872624D75B52003A2F4C /* AppDelegate.swift */; };
 		3748872924D75B52003A2F4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748872824D75B52003A2F4C /* SceneDelegate.swift */; };
 		3748872B24D75B52003A2F4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748872A24D75B52003A2F4C /* ViewController.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3744774624DB776900D90286 /* Plist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plist.swift; sourceTree = "<group>"; };
 		3748872324D75B52003A2F4C /* Breeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breeds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3748872624D75B52003A2F4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3748872824D75B52003A2F4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3744774524DB775500D90286 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3744774624DB776900D90286 /* Plist.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		3748871A24D75B52003A2F4C = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3744774724DB776900D90286 /* Plist.swift in Sources */,
 				3748872B24D75B52003A2F4C /* ViewController.swift in Sources */,
 				3748872724D75B52003A2F4C /* AppDelegate.swift in Sources */,
 				3748872924D75B52003A2F4C /* SceneDelegate.swift in Sources */,
