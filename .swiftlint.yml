@@ -2,6 +2,7 @@ disabled_rules: # rule identifiers to exclude from running
   - colon
   - comma
   - control_statement
+  - trailing_whitespace
 opt_in_rules: # some rules are only opt-in
   - empty_count
   # Find all the available rules by running:
@@ -43,10 +44,10 @@ type_name:
   excluded: iPhone # excluded via string
   allowed_symbols: ["_"] # these are allowed in type names
 identifier_name:
-  min_length: # only min_length
-    error: 4 # only error
+  min_length: 
+    error: 3 # only error
   excluded: # excluded via string array
+    - T
     - id
-    - URL
     - GlobalAPIKey
 reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji, sonarqube, markdown)
