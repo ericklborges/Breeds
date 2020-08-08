@@ -11,7 +11,7 @@ import Foundation
 
 class ImagesAPI {
     func fetchImages(breedId: Int, completion: @escaping(DataResponse<[Image], AFError>) -> Void) {
-        let path = TheDogAPISources.baseUrl + "/v1/images/search"
+        let path = TheDogAPISources.baseUrl.appendingPathComponent("/v1/images/search")
         let header = HTTPHeaders(TheDogAPISources.authHeader)
         
         let parameters = [

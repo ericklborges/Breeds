@@ -6,20 +6,25 @@
 //  Copyright © 2020 borges.erick. All rights reserved.
 //
 
-import Alamofire
 import Foundation
 
 class BreedsAPI {
-    func fetchBreeds(limit: Int, page: Int, completion: @escaping(DataResponse<[Breed], AFError>) -> Void) {
-        let path = TheDogAPISources.baseUrl + "/v1/breeds"
-        let header = HTTPHeaders(TheDogAPISources.authHeader)
+    
+    private let manager: RequestManager
+    
+    init(manager: RequestManager) {
+        self.manager = manager
+    }
+    
+    func fetchBreeds(limit: Int, page: Int, completion: @escaping(Result<[Breed], Error>) -> Void) {
+        let url = TheDogAPISources.baseUrl.appendingPathComponent("/v1/breeds")
+        let headers = TheDogAPISources.authHeader
         
         let parameters = [
             "limit": limit,
             "page": page
         ]
         
-        AF.request(path, method: .get, parameters: parameters, headers: header)
-            .responseDecodable(of: [Breed].self, completionHandler: completion)
+        manager.request(url: url, method: .get, parameters: parameters, headers: headers, completion: completion)
     }
 }

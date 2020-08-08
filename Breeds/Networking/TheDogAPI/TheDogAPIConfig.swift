@@ -10,7 +10,12 @@ import Keys
 import UIKit
 
 enum TheDogAPISources {
-    static let baseUrl = "https://api.thedogapi.com"
+    static var baseUrl: URL = {
+        guard let url = URL(string: "https://api.thedogapi.com") else {
+            preconditionFailure("The url used in \(TheDogAPISources.self) is not valid")
+        }
+        return url
+    }()
 
     static var authHeader: [String: String] {
         return [
