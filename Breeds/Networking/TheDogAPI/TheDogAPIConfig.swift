@@ -6,6 +6,7 @@
 //  Copyright © 2020 borges.erick. All rights reserved.
 //
 
+import Keys
 import UIKit
 
 enum TheDogAPISources {
@@ -13,7 +14,7 @@ enum TheDogAPISources {
 
     static var authHeader: [String: String] {
         return [
-            "x-api-key": Plist.read(from: .secrets, key: "TheDogAPIKey", type: String.self) ?? ""
+            "x-api-key": BreedsKeys().theDogAPIKey
         ]
     }
 }

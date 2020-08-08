@@ -7,15 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3711A06F24D8D46A0072A231 /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A0EBB724D8D07000D95F7C /* FBSnapshotTestCase.framework */; };
-		3711A07024D8D46A0072A231 /* Nimble_Snapshots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A0EBB524D8D07000D95F7C /* Nimble_Snapshots.framework */; };
-		3711A07124D8D46A0072A231 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A0EBB324D8D07000D95F7C /* Nimble.framework */; };
-		3711A07224D8D46A0072A231 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A0EBB124D8D07000D95F7C /* Quick.framework */; };
 		373EA9D524DCC0B800A2F236 /* TheDogAPIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE2BD824DB6677000590C6 /* TheDogAPIConfig.swift */; };
-		373EA9D624DCC0C800A2F236 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37EE2BD424DB6623000590C6 /* Secrets.plist */; };
 		373EA9DC24DCC22D00A2F236 /* ImagesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373EA9DB24DCC22D00A2F236 /* ImagesAPI.swift */; };
 		373EA9DE24DCC29B00A2F236 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373EA9DD24DCC29B00A2F236 /* Images.swift */; };
-		3744774724DB776900D90286 /* Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744774624DB776900D90286 /* Plist.swift */; };
 		3744774B24DB783600D90286 /* BreedsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744774A24DB783600D90286 /* BreedsAPI.swift */; };
 		3744774F24DB969200D90286 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744774E24DB969200D90286 /* Breed.swift */; };
 		3748872724D75B52003A2F4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748872624D75B52003A2F4C /* AppDelegate.swift */; };
@@ -25,9 +19,8 @@
 		3748873024D75B54003A2F4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3748872F24D75B54003A2F4C /* Assets.xcassets */; };
 		3748873324D75B54003A2F4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3748873124D75B54003A2F4C /* LaunchScreen.storyboard */; };
 		3748873E24D75B54003A2F4C /* BreedsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748873D24D75B54003A2F4C /* BreedsTests.swift */; };
-		37A0EBAD24D8D04C00D95F7C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A0EBAC24D8D04C00D95F7C /* Alamofire.framework */; };
-		37A0EBBC24D8D07000D95F7C /* KingfisherSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A0EBB224D8D07000D95F7C /* KingfisherSwiftUI.framework */; };
-		37A0EBC024D8D07100D95F7C /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A0EBB424D8D07000D95F7C /* Kingfisher.framework */; };
+		9439795505D3184BFDB61602 /* Pods_BreedsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A77D1D9BB46E9DEF6BD0EF04 /* Pods_BreedsTests.framework */; };
+		B2983B49D64C07ABAD4EB011 /* Pods_Breeds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16ED894158264549FFF536FF /* Pods_Breeds.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,9 +34,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16ED894158264549FFF536FF /* Pods_Breeds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Breeds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B008D59051ECCFC609BCC1E /* Pods-BreedsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreedsTests.debug.xcconfig"; path = "Target Support Files/Pods-BreedsTests/Pods-BreedsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		373EA9DB24DCC22D00A2F236 /* ImagesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesAPI.swift; sourceTree = "<group>"; };
 		373EA9DD24DCC29B00A2F236 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
-		3744774624DB776900D90286 /* Plist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plist.swift; sourceTree = "<group>"; };
 		3744774A24DB783600D90286 /* BreedsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsAPI.swift; sourceTree = "<group>"; };
 		3744774E24DB969200D90286 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		3748872324D75B52003A2F4C /* Breeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breeds.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,17 +51,11 @@
 		3748873924D75B54003A2F4C /* BreedsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreedsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3748873D24D75B54003A2F4C /* BreedsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsTests.swift; sourceTree = "<group>"; };
 		3748873F24D75B54003A2F4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		37A0EBAC24D8D04C00D95F7C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		37A0EBB024D8D07000D95F7C /* SWXMLHash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWXMLHash.framework; path = Carthage/Build/iOS/SWXMLHash.framework; sourceTree = "<group>"; };
-		37A0EBB124D8D07000D95F7C /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		37A0EBB224D8D07000D95F7C /* KingfisherSwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KingfisherSwiftUI.framework; path = Carthage/Build/iOS/KingfisherSwiftUI.framework; sourceTree = "<group>"; };
-		37A0EBB324D8D07000D95F7C /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
-		37A0EBB424D8D07000D95F7C /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
-		37A0EBB524D8D07000D95F7C /* Nimble_Snapshots.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble_Snapshots.framework; path = Carthage/Build/iOS/Nimble_Snapshots.framework; sourceTree = "<group>"; };
-		37A0EBB624D8D07000D95F7C /* Yams.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Yams.framework; path = Carthage/Build/iOS/Yams.framework; sourceTree = "<group>"; };
-		37A0EBB724D8D07000D95F7C /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSnapshotTestCase.framework; path = Carthage/Build/iOS/FBSnapshotTestCase.framework; sourceTree = "<group>"; };
-		37EE2BD424DB6623000590C6 /* Secrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		37EE2BD824DB6677000590C6 /* TheDogAPIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheDogAPIConfig.swift; sourceTree = "<group>"; };
+		9EFB0DB30FD29FF68C30A243 /* Pods-BreedsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreedsTests.release.xcconfig"; path = "Target Support Files/Pods-BreedsTests/Pods-BreedsTests.release.xcconfig"; sourceTree = "<group>"; };
+		A77D1D9BB46E9DEF6BD0EF04 /* Pods_BreedsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BreedsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8A49B37F5DFD717EAE19500 /* Pods-Breeds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds.debug.xcconfig"; path = "Target Support Files/Pods-Breeds/Pods-Breeds.debug.xcconfig"; sourceTree = "<group>"; };
+		F77BC15B0F23444CBA5524D4 /* Pods-Breeds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds.release.xcconfig"; path = "Target Support Files/Pods-Breeds/Pods-Breeds.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,9 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37A0EBBC24D8D07000D95F7C /* KingfisherSwiftUI.framework in Frameworks */,
-				37A0EBAD24D8D04C00D95F7C /* Alamofire.framework in Frameworks */,
-				37A0EBC024D8D07100D95F7C /* Kingfisher.framework in Frameworks */,
+				B2983B49D64C07ABAD4EB011 /* Pods_Breeds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,10 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3711A06F24D8D46A0072A231 /* FBSnapshotTestCase.framework in Frameworks */,
-				3711A07024D8D46A0072A231 /* Nimble_Snapshots.framework in Frameworks */,
-				3711A07124D8D46A0072A231 /* Nimble.framework in Frameworks */,
-				3711A07224D8D46A0072A231 /* Quick.framework in Frameworks */,
+				9439795505D3184BFDB61602 /* Pods_BreedsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,14 +111,6 @@
 				373EA9DD24DCC29B00A2F236 /* Images.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		3744774524DB775500D90286 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				3744774624DB776900D90286 /* Plist.swift */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		3744774824DB778200D90286 /* Application */ = {
@@ -178,7 +153,8 @@
 				3748872524D75B52003A2F4C /* Breeds */,
 				3748873C24D75B54003A2F4C /* BreedsTests */,
 				3748872424D75B52003A2F4C /* Products */,
-				37A0EBAB24D8D04C00D95F7C /* Frameworks */,
+				F5448412D7EA64F9D001EAD2 /* Pods */,
+				EF2C8F5656BC059BC8CFE99D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -195,14 +171,12 @@
 			isa = PBXGroup;
 			children = (
 				3748873424D75B54003A2F4C /* Info.plist */,
-				37EE2BD424DB6623000590C6 /* Secrets.plist */,
 				3748872A24D75B52003A2F4C /* ViewController.swift */,
 				3748872F24D75B54003A2F4C /* Assets.xcassets */,
 				3744774824DB778200D90286 /* Application */,
 				37EE2BD724DB664D000590C6 /* Networking */,
 				3748873124D75B54003A2F4C /* LaunchScreen.storyboard */,
 				3748872C24D75B52003A2F4C /* Main.storyboard */,
-				3744774524DB775500D90286 /* Utils */,
 			);
 			path = Breeds;
 			sourceTree = "<group>";
@@ -216,28 +190,32 @@
 			path = BreedsTests;
 			sourceTree = "<group>";
 		};
-		37A0EBAB24D8D04C00D95F7C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				37A0EBB724D8D07000D95F7C /* FBSnapshotTestCase.framework */,
-				37A0EBB424D8D07000D95F7C /* Kingfisher.framework */,
-				37A0EBB224D8D07000D95F7C /* KingfisherSwiftUI.framework */,
-				37A0EBB524D8D07000D95F7C /* Nimble_Snapshots.framework */,
-				37A0EBB324D8D07000D95F7C /* Nimble.framework */,
-				37A0EBB124D8D07000D95F7C /* Quick.framework */,
-				37A0EBB024D8D07000D95F7C /* SWXMLHash.framework */,
-				37A0EBB624D8D07000D95F7C /* Yams.framework */,
-				37A0EBAC24D8D04C00D95F7C /* Alamofire.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		37EE2BD724DB664D000590C6 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				373EA9D724DCC18E00A2F236 /* TheDogAPI */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		EF2C8F5656BC059BC8CFE99D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16ED894158264549FFF536FF /* Pods_Breeds.framework */,
+				A77D1D9BB46E9DEF6BD0EF04 /* Pods_BreedsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5448412D7EA64F9D001EAD2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8A49B37F5DFD717EAE19500 /* Pods-Breeds.debug.xcconfig */,
+				F77BC15B0F23444CBA5524D4 /* Pods-Breeds.release.xcconfig */,
+				1B008D59051ECCFC609BCC1E /* Pods-BreedsTests.debug.xcconfig */,
+				9EFB0DB30FD29FF68C30A243 /* Pods-BreedsTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,12 +225,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3748874224D75B54003A2F4C /* Build configuration list for PBXNativeTarget "Breeds" */;
 			buildPhases = (
+				0BE1E5092739DD3839B89FBC /* [CP] Check Pods Manifest.lock */,
 				3748871F24D75B52003A2F4C /* Sources */,
 				3748872024D75B52003A2F4C /* Frameworks */,
 				3748872124D75B52003A2F4C /* Resources */,
-				37A0EBAA24D8CBCE00D95F7C /* Carthage */,
 				3711A07424D8D7340072A231 /* Swift Lint */,
-				3711A07624D8E6850072A231 /* Build Secrets Property List */,
+				BA688B944CD4C4DA4854D9DA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -267,10 +245,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3748874524D75B54003A2F4C /* Build configuration list for PBXNativeTarget "BreedsTests" */;
 			buildPhases = (
+				81C842697F88A0EE664A98DA /* [CP] Check Pods Manifest.lock */,
 				3748873524D75B54003A2F4C /* Sources */,
 				3748873624D75B54003A2F4C /* Frameworks */,
 				3748873724D75B54003A2F4C /* Resources */,
-				3711A07324D8D4830072A231 /* Carthage */,
+				2B732D2C0B80BBF4526B7E73 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -325,7 +304,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				373EA9D624DCC0C800A2F236 /* Secrets.plist in Resources */,
 				3748873324D75B54003A2F4C /* LaunchScreen.storyboard in Resources */,
 				3748873024D75B54003A2F4C /* Assets.xcassets in Resources */,
 				3748872E24D75B52003A2F4C /* Main.storyboard in Resources */,
@@ -342,7 +320,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3711A07324D8D4830072A231 /* Carthage */ = {
+		0BE1E5092739DD3839B89FBC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -350,23 +328,36 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/FBSnapshotTestCase.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Nimble_Snapshots.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = Carthage;
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/FBSnapshotTestCase.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Nimble_Snapshots.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Nimble.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Quick.framework",
+				"$(DERIVED_FILE_DIR)/Pods-Breeds-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B732D2C0B80BBF4526B7E73 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BreedsTests/Pods-BreedsTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BreedsTests/Pods-BreedsTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BreedsTests/Pods-BreedsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		3711A07424D8D7340072A231 /* Swift Lint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -384,27 +375,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/zsh;
-			shellScript = "#!/bin/bash\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo -e \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint, or simbly \\\"$ brew install swiftlint\\\"\"\nfi\n";
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
-		3711A07624D8E6850072A231 /* Build Secrets Property List */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Build Secrets Property List";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/zsh;
-			shellScript = "# checks if Secrets.plist exists before running\nif ! [ -f ${SRCROOT}/Breeds/Secrets.plist ]; then\n    echo \"error: Please run the command BuildSecretsPlist from the Source file of the project. It will create a .plist file with the required secrets needed to run the project.\"\n    exit 1 \nfi\n";
-		};
-		37A0EBAA24D8CBCE00D95F7C /* Carthage */ = {
+		81C842697F88A0EE664A98DA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -412,25 +385,36 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/KingfisherSwiftUI.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SWXMLHash.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Yams.framework",
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = Carthage;
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/KingfisherSwiftUI.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SWXMLHash.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Yams.framework",
+				"$(DERIVED_FILE_DIR)/Pods-BreedsTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/zsh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA688B944CD4C4DA4854D9DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Breeds/Pods-Breeds-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Breeds/Pods-Breeds-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Breeds/Pods-Breeds-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -440,7 +424,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				373EA9D524DCC0B800A2F236 /* TheDogAPIConfig.swift in Sources */,
-				3744774724DB776900D90286 /* Plist.swift in Sources */,
 				373EA9DC24DCC22D00A2F236 /* ImagesAPI.swift in Sources */,
 				3744774F24DB969200D90286 /* Breed.swift in Sources */,
 				373EA9DE24DCC29B00A2F236 /* Images.swift in Sources */,
@@ -605,14 +588,11 @@
 		};
 		3748874324D75B54003A2F4C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8A49B37F5DFD717EAE19500 /* Pods-Breeds.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QQ8Z3L4APX;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = Breeds/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -627,14 +607,11 @@
 		};
 		3748874424D75B54003A2F4C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F77BC15B0F23444CBA5524D4 /* Pods-Breeds.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QQ8Z3L4APX;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = Breeds/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -649,15 +626,13 @@
 		};
 		3748874624D75B54003A2F4C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B008D59051ECCFC609BCC1E /* Pods-BreedsTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QQ8Z3L4APX;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = BreedsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -675,15 +650,13 @@
 		};
 		3748874724D75B54003A2F4C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EFB0DB30FD29FF68C30A243 /* Pods-BreedsTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QQ8Z3L4APX;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = BreedsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (

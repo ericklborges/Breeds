@@ -7,7 +7,20 @@
 		<key>Breeds.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>10</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>3748872224D75B52003A2F4C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3748873824D75B54003A2F4C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

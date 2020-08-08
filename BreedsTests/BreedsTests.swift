@@ -6,6 +6,10 @@
 //  Copyright © 2020 borges.erick. All rights reserved.
 //
 
+import Quick
+import Nimble
+import Nimble_Snapshots
+
 import XCTest
 @testable import Breeds
 
