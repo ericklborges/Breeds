@@ -20,6 +20,7 @@
 		3748873E24D75B54003A2F4C /* BreedsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748873D24D75B54003A2F4C /* BreedsTests.swift */; };
 		37A84D6B24E20FE70006AF73 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A84D6A24E20FE70006AF73 /* Colors.swift */; };
 		37A84D7024E213300006AF73 /* UIColor+Boilerplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A84D6E24E212EE0006AF73 /* UIColor+Boilerplate.swift */; };
+		37A84D7324E2205B0006AF73 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A84D7224E2205B0006AF73 /* Identifier.swift */; };
 		37C2308224DF4D7E00D82388 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2308124DF4D7E00D82388 /* RequestManager.swift */; };
 		37C2308424DF4DC500D82388 /* AlamofireRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2308324DF4DC500D82388 /* AlamofireRequestManager.swift */; };
 		37C2308F24E09F0C00D82388 /* UIImage+SetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2308E24E09F0C00D82388 /* UIImage+SetImage.swift */; };
@@ -56,6 +57,7 @@
 		3748873F24D75B54003A2F4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37A84D6A24E20FE70006AF73 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		37A84D6E24E212EE0006AF73 /* UIColor+Boilerplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Boilerplate.swift"; sourceTree = "<group>"; };
+		37A84D7224E2205B0006AF73 /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
 		37C2308124DF4D7E00D82388 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		37C2308324DF4DC500D82388 /* AlamofireRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireRequestManager.swift; sourceTree = "<group>"; };
 		37C2308E24E09F0C00D82388 /* UIImage+SetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+SetImage.swift"; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				37A84D6A24E20FE70006AF73 /* Colors.swift */,
+				37A84D7224E2205B0006AF73 /* Identifier.swift */,
 				3748872F24D75B54003A2F4C /* Assets.xcassets */,
 			);
 			path = Sources;
@@ -468,6 +471,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				373EA9D524DCC0B800A2F236 /* TheDogAPIConfig.swift in Sources */,
+				37A84D7324E2205B0006AF73 /* Identifier.swift in Sources */,
 				373EA9DC24DCC22D00A2F236 /* ImagesAPI.swift in Sources */,
 				3744774F24DB969200D90286 /* Breed.swift in Sources */,
 				373EA9DE24DCC29B00A2F236 /* Image.swift in Sources */,
