@@ -21,8 +21,11 @@
 		37A84D6B24E20FE70006AF73 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A84D6A24E20FE70006AF73 /* Colors.swift */; };
 		37A84D7024E213300006AF73 /* UIColor+Boilerplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A84D6E24E212EE0006AF73 /* UIColor+Boilerplate.swift */; };
 		37A84D7324E2205B0006AF73 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A84D7224E2205B0006AF73 /* Identifier.swift */; };
+		37A84D7524E222620006AF73 /* UINavigationController+CustomAppearence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A84D7424E222620006AF73 /* UINavigationController+CustomAppearence.swift */; };
 		37C2308224DF4D7E00D82388 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2308124DF4D7E00D82388 /* RequestManager.swift */; };
 		37C2308424DF4DC500D82388 /* AlamofireRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2308324DF4DC500D82388 /* AlamofireRequestManager.swift */; };
+		37C2308824E09A4400D82388 /* BreedsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2308724E09A4400D82388 /* BreedsCollectionViewController.swift */; };
+		37C2308C24E09C5600D82388 /* BreedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2308B24E09C5600D82388 /* BreedCollectionViewCell.swift */; };
 		37C2308F24E09F0C00D82388 /* UIImage+SetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2308E24E09F0C00D82388 /* UIImage+SetImage.swift */; };
 		9439795505D3184BFDB61602 /* Pods_BreedsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A77D1D9BB46E9DEF6BD0EF04 /* Pods_BreedsTests.framework */; };
 		B2983B49D64C07ABAD4EB011 /* Pods_Breeds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16ED894158264549FFF536FF /* Pods_Breeds.framework */; };
@@ -58,8 +61,11 @@
 		37A84D6A24E20FE70006AF73 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		37A84D6E24E212EE0006AF73 /* UIColor+Boilerplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Boilerplate.swift"; sourceTree = "<group>"; };
 		37A84D7224E2205B0006AF73 /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
+		37A84D7424E222620006AF73 /* UINavigationController+CustomAppearence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+CustomAppearence.swift"; sourceTree = "<group>"; };
 		37C2308124DF4D7E00D82388 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		37C2308324DF4DC500D82388 /* AlamofireRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireRequestManager.swift; sourceTree = "<group>"; };
+		37C2308724E09A4400D82388 /* BreedsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsCollectionViewController.swift; sourceTree = "<group>"; };
+		37C2308B24E09C5600D82388 /* BreedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedCollectionViewCell.swift; sourceTree = "<group>"; };
 		37C2308E24E09F0C00D82388 /* UIImage+SetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+SetImage.swift"; sourceTree = "<group>"; };
 		37EE2BD824DB6677000590C6 /* TheDogAPIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheDogAPIConfig.swift; sourceTree = "<group>"; };
 		9EFB0DB30FD29FF68C30A243 /* Pods-BreedsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreedsTests.release.xcconfig"; path = "Target Support Files/Pods-BreedsTests/Pods-BreedsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +190,7 @@
 				3748872C24D75B52003A2F4C /* Main.storyboard */,
 				3748873424D75B54003A2F4C /* Info.plist */,
 				3744774824DB778200D90286 /* Application */,
+				37C2308524E099E800D82388 /* BreedsCollection */,
 				37EE2BD724DB664D000590C6 /* Networking */,
 				37A84D6824E20FBC0006AF73 /* Sources */,
 				37C2308D24E09E1100D82388 /* Utils */,
@@ -227,11 +234,37 @@
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
+		37C2308524E099E800D82388 /* BreedsCollection */ = {
+			isa = PBXGroup;
+			children = (
+				37C2308924E09C1500D82388 /* Controller */,
+				37C2308A24E09C1F00D82388 /* View */,
+			);
+			path = BreedsCollection;
+			sourceTree = "<group>";
+		};
+		37C2308924E09C1500D82388 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				37C2308724E09A4400D82388 /* BreedsCollectionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		37C2308A24E09C1F00D82388 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				37C2308B24E09C5600D82388 /* BreedCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		37C2308D24E09E1100D82388 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				37C2308E24E09F0C00D82388 /* UIImage+SetImage.swift */,
 				37A84D6E24E212EE0006AF73 /* UIColor+Boilerplate.swift */,
+				37A84D7424E222620006AF73 /* UINavigationController+CustomAppearence.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -474,6 +507,7 @@
 				37A84D7324E2205B0006AF73 /* Identifier.swift in Sources */,
 				373EA9DC24DCC22D00A2F236 /* ImagesAPI.swift in Sources */,
 				3744774F24DB969200D90286 /* Breed.swift in Sources */,
+				37A84D7524E222620006AF73 /* UINavigationController+CustomAppearence.swift in Sources */,
 				373EA9DE24DCC29B00A2F236 /* Image.swift in Sources */,
 				37C2308F24E09F0C00D82388 /* UIImage+SetImage.swift in Sources */,
 				3748872724D75B52003A2F4C /* AppDelegate.swift in Sources */,
@@ -481,8 +515,10 @@
 				37A84D7024E213300006AF73 /* UIColor+Boilerplate.swift in Sources */,
 				37C2308224DF4D7E00D82388 /* RequestManager.swift in Sources */,
 				37A84D6B24E20FE70006AF73 /* Colors.swift in Sources */,
+				37C2308824E09A4400D82388 /* BreedsCollectionViewController.swift in Sources */,
 				3748872924D75B52003A2F4C /* SceneDelegate.swift in Sources */,
 				3744774B24DB783600D90286 /* BreedsAPI.swift in Sources */,
+				37C2308C24E09C5600D82388 /* BreedCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
