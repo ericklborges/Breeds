@@ -19,6 +19,7 @@
 		3748873024D75B54003A2F4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3748872F24D75B54003A2F4C /* Assets.xcassets */; };
 		3748873324D75B54003A2F4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3748873124D75B54003A2F4C /* LaunchScreen.storyboard */; };
 		3748873E24D75B54003A2F4C /* BreedsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748873D24D75B54003A2F4C /* BreedsTests.swift */; };
+		37A84D7024E213300006AF73 /* UIColor+Boilerplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A84D6E24E212EE0006AF73 /* UIColor+Boilerplate.swift */; };
 		37C2308224DF4D7E00D82388 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2308124DF4D7E00D82388 /* RequestManager.swift */; };
 		37C2308424DF4DC500D82388 /* AlamofireRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2308324DF4DC500D82388 /* AlamofireRequestManager.swift */; };
 		37C2308F24E09F0C00D82388 /* UIImage+SetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2308E24E09F0C00D82388 /* UIImage+SetImage.swift */; };
@@ -54,6 +55,7 @@
 		3748873924D75B54003A2F4C /* BreedsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreedsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3748873D24D75B54003A2F4C /* BreedsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsTests.swift; sourceTree = "<group>"; };
 		3748873F24D75B54003A2F4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37A84D6E24E212EE0006AF73 /* UIColor+Boilerplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Boilerplate.swift"; sourceTree = "<group>"; };
 		37C2308124DF4D7E00D82388 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		37C2308324DF4DC500D82388 /* AlamofireRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireRequestManager.swift; sourceTree = "<group>"; };
 		37C2308E24E09F0C00D82388 /* UIImage+SetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+SetImage.swift"; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				37C2308E24E09F0C00D82388 /* UIImage+SetImage.swift */,
+				37A84D6E24E212EE0006AF73 /* UIColor+Boilerplate.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				37C2308F24E09F0C00D82388 /* UIImage+SetImage.swift in Sources */,
 				3748872724D75B52003A2F4C /* AppDelegate.swift in Sources */,
 				37C2308424DF4DC500D82388 /* AlamofireRequestManager.swift in Sources */,
+				37A84D7024E213300006AF73 /* UIColor+Boilerplate.swift in Sources */,
 				37C2308224DF4D7E00D82388 /* RequestManager.swift in Sources */,
 				3748872924D75B52003A2F4C /* SceneDelegate.swift in Sources */,
 				3744774B24DB783600D90286 /* BreedsAPI.swift in Sources */,
