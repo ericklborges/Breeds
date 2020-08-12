@@ -14,14 +14,16 @@ protocol RequestManager {
 }
 
 enum RequestManagerFactory {
-    case alamofire
-    
-    func create() -> RequestManager {
-        switch self {
+    static func create(_ type: RequestManagerType = .alamofire) -> RequestManager {
+        switch type {
         case .alamofire:
             return AlamofireRequestManager()
         }
     }
+}
+
+enum RequestManagerType {
+    case alamofire
 }
 
 enum HTTPMethod: String {
