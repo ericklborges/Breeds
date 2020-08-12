@@ -6,19 +6,24 @@
 //  Copyright © 2020 borges.erick. All rights reserved.
 //
 
-import Alamofire
 import Foundation
 
 class ImagesAPI {
-    func fetchImages(breedId: Int, completion: @escaping(DataResponse<[Image], AFError>) -> Void) {
-        let path = TheDogAPISources.baseUrl.appendingPathComponent("/v1/images/search")
-        let header = HTTPHeaders(TheDogAPISources.authHeader)
+    
+    private let manager: RequestManager
+    
+    init(manager: RequestManager) {
+        self.manager = manager
+    }
+    
+    func fetchImages(breedId: Int, completion: @escaping(Result<[Image], Error>) -> Void) {
+        let url = TheDogAPISources.baseUrl.appendingPathComponent("/v1/images/search")
+        let headers = TheDogAPISources.authHeader
         
         let parameters = [
             "breed_id": breedId
         ]
         
-        AF.request(path, method: .get, parameters: parameters, headers: header)
-            .responseDecodable(of: [Image].self, completionHandler: completion)
+        manager.request(url: url, method: .get, parameters: parameters, headers: headers, completion: completion)
     }
 }
