@@ -10,12 +10,13 @@ import UIKit
 
 class BreedCollectionViewCell: UICollectionViewCell {
     
+    // MARK: Views
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     
+    // MARK: Setup
     func setup(image: Image) {
-        nameLabel.text = image.breeds.first?.name
+        nameLabel.text = image.breeds.first?.name ?? "Breed not identified"
         imageView.setImage(url: URL(string: image.url))
     }
-    
 }
