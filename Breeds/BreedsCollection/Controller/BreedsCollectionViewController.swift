@@ -13,7 +13,7 @@ class BreedsCollectionViewController: UICollectionViewController {
     // MARK: Properties
     private lazy var viewModel = BreedsCollectionViewModel(delegate: self)
     
-    // MARK: Init
+    // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigation()
@@ -21,8 +21,7 @@ class BreedsCollectionViewController: UICollectionViewController {
         collectionView.prefetchDataSource = self
     }
     
-    // MARK: Setup
-    private func setupNavigation() {
+    func setupNavigation() {
         navigationController?.applyCustomAppearence()
         navigationController?.navigationBar.prefersLargeTitles = true
     }
@@ -47,6 +46,13 @@ extension BreedsCollectionViewController {
     }
 }
 
+// MARK: - UICollectionViewDelegate
+extension BreedsCollectionViewController {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: Identifier.Segue.goToBreedDetail, sender: self)
+    }
+}
+
 // MARK: - UICollectionViewDelegateFlowLayout
 extension BreedsCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -55,7 +61,7 @@ extension BreedsCollectionViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-// MARK: - UICollectionViewDelegateFlowLayout
+// MARK: - UICollectionViewDataSourcePrefetching
 extension BreedsCollectionViewController: UICollectionViewDataSourcePrefetching {
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
         if viewModel.shouldPrefetchImages(for: indexPaths) {

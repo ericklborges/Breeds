@@ -12,11 +12,14 @@ extension UINavigationController {
     func applyCustomAppearence() {
         let navBarAppearance = UINavigationBarAppearance()
         navBarAppearance.configureWithOpaqueBackground()
-        navBarAppearance.titleTextAttributes = [.foregroundColor: TextColor.title]
         navBarAppearance.largeTitleTextAttributes = [.foregroundColor: TextColor.title]
+        navBarAppearance.titleTextAttributes = [.foregroundColor: TextColor.title]
         navBarAppearance.backgroundColor = BackgroundColor.navigation
         
+        navigationBar.compactAppearance = navBarAppearance
         navigationBar.standardAppearance = navBarAppearance
         navigationBar.scrollEdgeAppearance = navBarAppearance
+        
+        navigationBar.isTranslucent = false
     }
 }
