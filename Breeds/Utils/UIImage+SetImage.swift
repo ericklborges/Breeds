@@ -11,6 +11,7 @@ import UIKit
 
 extension UIImageView {
     func setImage(url: URL?) {
+        self.kf.indicatorType = .activity
         self.kf.setImage(with: url)
     }
 }
