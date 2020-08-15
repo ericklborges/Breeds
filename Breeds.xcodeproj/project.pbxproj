@@ -28,6 +28,9 @@
 		37C2308824E09A4400D82388 /* BreedsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2308724E09A4400D82388 /* BreedsCollectionViewController.swift */; };
 		37C2308C24E09C5600D82388 /* BreedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2308B24E09C5600D82388 /* BreedCollectionViewCell.swift */; };
 		37C2308F24E09F0C00D82388 /* UIImage+SetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2308E24E09F0C00D82388 /* UIImage+SetImage.swift */; };
+		37FE93A524E873E40075F99E /* BreedDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE93A424E873E40075F99E /* BreedDetailView.swift */; };
+		37FE93A724E873EE0075F99E /* BreedDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37FE93A624E873EE0075F99E /* BreedDetailView.xib */; };
+		37FE93A924E8754C0075F99E /* BreedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE93A824E8754C0075F99E /* BreedDetailViewController.swift */; };
 		9439795505D3184BFDB61602 /* Pods_BreedsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A77D1D9BB46E9DEF6BD0EF04 /* Pods_BreedsTests.framework */; };
 		B2983B49D64C07ABAD4EB011 /* Pods_Breeds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16ED894158264549FFF536FF /* Pods_Breeds.framework */; };
 /* End PBXBuildFile section */
@@ -70,6 +73,9 @@
 		37C2308B24E09C5600D82388 /* BreedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedCollectionViewCell.swift; sourceTree = "<group>"; };
 		37C2308E24E09F0C00D82388 /* UIImage+SetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+SetImage.swift"; sourceTree = "<group>"; };
 		37EE2BD824DB6677000590C6 /* TheDogAPIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheDogAPIConfig.swift; sourceTree = "<group>"; };
+		37FE93A424E873E40075F99E /* BreedDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailView.swift; sourceTree = "<group>"; };
+		37FE93A624E873EE0075F99E /* BreedDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedDetailView.xib; sourceTree = "<group>"; };
+		37FE93A824E8754C0075F99E /* BreedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailViewController.swift; sourceTree = "<group>"; };
 		9EFB0DB30FD29FF68C30A243 /* Pods-BreedsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreedsTests.release.xcconfig"; path = "Target Support Files/Pods-BreedsTests/Pods-BreedsTests.release.xcconfig"; sourceTree = "<group>"; };
 		A77D1D9BB46E9DEF6BD0EF04 /* Pods_BreedsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BreedsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8A49B37F5DFD717EAE19500 /* Pods-Breeds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds.debug.xcconfig"; path = "Target Support Files/Pods-Breeds/Pods-Breeds.debug.xcconfig"; sourceTree = "<group>"; };
@@ -193,6 +199,7 @@
 				3748873424D75B54003A2F4C /* Info.plist */,
 				3744774824DB778200D90286 /* Application */,
 				37C2308524E099E800D82388 /* BreedsCollection */,
+				37FE939D24E86FA30075F99E /* BreedDetail */,
 				37EE2BD724DB664D000590C6 /* Networking */,
 				37A84D6824E20FBC0006AF73 /* Sources */,
 				37C2308D24E09E1100D82388 /* Utils */,
@@ -287,6 +294,32 @@
 				373EA9D724DCC18E00A2F236 /* TheDogAPI */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		37FE939D24E86FA30075F99E /* BreedDetail */ = {
+			isa = PBXGroup;
+			children = (
+				37FE93A124E86FE00075F99E /* Controller */,
+				37FE93A024E86FDC0075F99E /* View */,
+			);
+			path = BreedDetail;
+			sourceTree = "<group>";
+		};
+		37FE93A024E86FDC0075F99E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				37FE93A424E873E40075F99E /* BreedDetailView.swift */,
+				37FE93A624E873EE0075F99E /* BreedDetailView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		37FE93A124E86FE00075F99E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				37FE93A824E8754C0075F99E /* BreedDetailViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		EF2C8F5656BC059BC8CFE99D /* Frameworks */ = {
@@ -395,6 +428,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37FE93A724E873EE0075F99E /* BreedDetailView.xib in Resources */,
 				3748873324D75B54003A2F4C /* LaunchScreen.storyboard in Resources */,
 				3748873024D75B54003A2F4C /* Assets.xcassets in Resources */,
 				3748872E24D75B52003A2F4C /* Main.storyboard in Resources */,
@@ -529,7 +563,9 @@
 				37C2308824E09A4400D82388 /* BreedsCollectionViewController.swift in Sources */,
 				3748872924D75B52003A2F4C /* SceneDelegate.swift in Sources */,
 				378CBBB524E49D1E003A641B /* BreedsCollectionViewModel.swift in Sources */,
+				37FE93A924E8754C0075F99E /* BreedDetailViewController.swift in Sources */,
 				3744774B24DB783600D90286 /* BreedsAPI.swift in Sources */,
+				37FE93A524E873E40075F99E /* BreedDetailView.swift in Sources */,
 				37C2308C24E09C5600D82388 /* BreedCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

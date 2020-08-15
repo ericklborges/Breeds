@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -74,12 +75,46 @@
                             <outlet property="delegate" destination="8Ox-J5-m4a" id="1qg-OW-MXc"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Breeds" id="QGR-Sh-8Id"/>
+                    <navigationItem key="navigationItem" title="Breeds" largeTitleDisplayMode="always" id="un5-MB-yjZ"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <segue destination="pp4-YL-q74" kind="show" identifier="GoToBreedDetail" id="qf2-GA-9yf"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tsJ-Jn-Nhf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="710.14492753623199" y="666.96428571428567"/>
+        </scene>
+        <!--Breed Detail View Controller-->
+        <scene sceneID="znW-8f-xDw">
+            <objects>
+                <viewController id="pp4-YL-q74" customClass="BreedDetailViewController" customModule="Breeds" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="77C-0b-YdB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bak-NN-OYi" customClass="BreedDetailView" customModule="Breeds" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Bak-NN-OYi" secondAttribute="bottom" id="0d1-eV-gUD"/>
+                            <constraint firstItem="Bak-NN-OYi" firstAttribute="top" secondItem="bTX-0P-eQ2" secondAttribute="top" id="5EW-c8-vkg"/>
+                            <constraint firstItem="Bak-NN-OYi" firstAttribute="leading" secondItem="bTX-0P-eQ2" secondAttribute="leading" id="lTM-9y-27U"/>
+                            <constraint firstItem="bTX-0P-eQ2" firstAttribute="trailing" secondItem="Bak-NN-OYi" secondAttribute="trailing" id="qtR-3x-v2Z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bTX-0P-eQ2"/>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="bj8-aA-ONH"/>
+                    <connections>
+                        <outlet property="baseView" destination="Bak-NN-OYi" id="pwf-5L-AD2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gRk-jb-yPR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1628" y="667"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="brN-b7-s6v">
