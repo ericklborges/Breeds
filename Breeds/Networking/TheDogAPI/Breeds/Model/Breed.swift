@@ -16,7 +16,7 @@ struct Breed: Codable {
     let bredFor: String?
     let breedGroup: String?
     let lifeSpan: String
-    let temperament: String
+    let temperament: String?
     let origin: String?
     let countryCode: String?
     let breedDescription: String?
