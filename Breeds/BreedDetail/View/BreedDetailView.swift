@@ -8,14 +8,12 @@
 
 import UIKit
 
-class BreedDetailView: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+class BreedDetailView: UIView, NibLoadable {
+    
+    @IBOutlet weak var label: UILabel!
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupFromNib()
     }
-    */
-
 }

@@ -31,6 +31,7 @@
 		37FE93A524E873E40075F99E /* BreedDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE93A424E873E40075F99E /* BreedDetailView.swift */; };
 		37FE93A724E873EE0075F99E /* BreedDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37FE93A624E873EE0075F99E /* BreedDetailView.xib */; };
 		37FE93A924E8754C0075F99E /* BreedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE93A824E8754C0075F99E /* BreedDetailViewController.swift */; };
+		37FE93AC24E8826C0075F99E /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE93AB24E8826C0075F99E /* NibLoadable.swift */; };
 		9439795505D3184BFDB61602 /* Pods_BreedsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A77D1D9BB46E9DEF6BD0EF04 /* Pods_BreedsTests.framework */; };
 		B2983B49D64C07ABAD4EB011 /* Pods_Breeds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16ED894158264549FFF536FF /* Pods_Breeds.framework */; };
 /* End PBXBuildFile section */
@@ -76,6 +77,7 @@
 		37FE93A424E873E40075F99E /* BreedDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailView.swift; sourceTree = "<group>"; };
 		37FE93A624E873EE0075F99E /* BreedDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedDetailView.xib; sourceTree = "<group>"; };
 		37FE93A824E8754C0075F99E /* BreedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailViewController.swift; sourceTree = "<group>"; };
+		37FE93AB24E8826C0075F99E /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		9EFB0DB30FD29FF68C30A243 /* Pods-BreedsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreedsTests.release.xcconfig"; path = "Target Support Files/Pods-BreedsTests/Pods-BreedsTests.release.xcconfig"; sourceTree = "<group>"; };
 		A77D1D9BB46E9DEF6BD0EF04 /* Pods_BreedsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BreedsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8A49B37F5DFD717EAE19500 /* Pods-Breeds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds.debug.xcconfig"; path = "Target Support Files/Pods-Breeds/Pods-Breeds.debug.xcconfig"; sourceTree = "<group>"; };
@@ -280,8 +282,9 @@
 		37C2308D24E09E1100D82388 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				37C2308E24E09F0C00D82388 /* UIImage+SetImage.swift */,
+				37FE93AB24E8826C0075F99E /* NibLoadable.swift */,
 				37A84D6E24E212EE0006AF73 /* UIColor+Boilerplate.swift */,
+				37C2308E24E09F0C00D82388 /* UIImage+SetImage.swift */,
 				37A84D7424E222620006AF73 /* UINavigationController+CustomAppearence.swift */,
 			);
 			path = Utils;
@@ -561,6 +564,7 @@
 				37C2308224DF4D7E00D82388 /* RequestManager.swift in Sources */,
 				37A84D6B24E20FE70006AF73 /* Colors.swift in Sources */,
 				37C2308824E09A4400D82388 /* BreedsCollectionViewController.swift in Sources */,
+				37FE93AC24E8826C0075F99E /* NibLoadable.swift in Sources */,
 				3748872924D75B52003A2F4C /* SceneDelegate.swift in Sources */,
 				378CBBB524E49D1E003A641B /* BreedsCollectionViewModel.swift in Sources */,
 				37FE93A924E8754C0075F99E /* BreedDetailViewController.swift in Sources */,
