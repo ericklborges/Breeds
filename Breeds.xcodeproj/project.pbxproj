@@ -27,6 +27,8 @@
 		37C2308824E09A4400D82388 /* BreedsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2308724E09A4400D82388 /* BreedsCollectionViewController.swift */; };
 		37C2308C24E09C5600D82388 /* BreedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2308B24E09C5600D82388 /* BreedCollectionViewCell.swift */; };
 		37C2308F24E09F0C00D82388 /* UIImage+SetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2308E24E09F0C00D82388 /* UIImage+SetImage.swift */; };
+		37C4BA8824E9F2A30071659E /* Breed+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C4BA8724E9F2A30071659E /* Breed+Stub.swift */; };
+		37C4BA8A24E9F2AE0071659E /* Image+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C4BA8924E9F2AE0071659E /* Image+Stub.swift */; };
 		37FE93A524E873E40075F99E /* BreedDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE93A424E873E40075F99E /* BreedDetailView.swift */; };
 		37FE93A724E873EE0075F99E /* BreedDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37FE93A624E873EE0075F99E /* BreedDetailView.xib */; };
 		37FE93A924E8754C0075F99E /* BreedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE93A824E8754C0075F99E /* BreedDetailViewController.swift */; };
@@ -72,6 +74,8 @@
 		37C2308724E09A4400D82388 /* BreedsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsCollectionViewController.swift; sourceTree = "<group>"; };
 		37C2308B24E09C5600D82388 /* BreedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedCollectionViewCell.swift; sourceTree = "<group>"; };
 		37C2308E24E09F0C00D82388 /* UIImage+SetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+SetImage.swift"; sourceTree = "<group>"; };
+		37C4BA8724E9F2A30071659E /* Breed+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Breed+Stub.swift"; sourceTree = "<group>"; };
+		37C4BA8924E9F2AE0071659E /* Image+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Stub.swift"; sourceTree = "<group>"; };
 		37EE2BD824DB6677000590C6 /* TheDogAPIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheDogAPIConfig.swift; sourceTree = "<group>"; };
 		37FE93A424E873E40075F99E /* BreedDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailView.swift; sourceTree = "<group>"; };
 		37FE93A624E873EE0075F99E /* BreedDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedDetailView.xib; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 		3748873C24D75B54003A2F4C /* BreedsTests */ = {
 			isa = PBXGroup;
 			children = (
+				37C4BA8624E9F2910071659E /* Stubs */,
 				3748873D24D75B54003A2F4C /* BreedsTests.swift */,
 				3748873F24D75B54003A2F4C /* Info.plist */,
 			);
@@ -264,6 +269,15 @@
 				37A84D7424E222620006AF73 /* UINavigationController+CustomAppearence.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		37C4BA8624E9F2910071659E /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				37C4BA8724E9F2A30071659E /* Breed+Stub.swift */,
+				37C4BA8924E9F2AE0071659E /* Image+Stub.swift */,
+			);
+			path = Stubs;
 			sourceTree = "<group>";
 		};
 		37EE2BD724DB664D000590C6 /* Networking */ = {
@@ -554,6 +568,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37C4BA8824E9F2A30071659E /* Breed+Stub.swift in Sources */,
+				37C4BA8A24E9F2AE0071659E /* Image+Stub.swift in Sources */,
 				3748873E24D75B54003A2F4C /* BreedsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
