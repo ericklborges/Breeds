@@ -38,12 +38,21 @@ extension BreedsCollectionViewController {
         breedDetailController.breed = viewModel.currentSelectedBreed
         breedDetailController.imageUrl = viewModel.currentSelectedImage?.url
     }
+    
+    private func showEmptyBreedFeedback() {
+        let alert = UIAlertController(title: "Missing Breed", message: "The selected image does not have a releted Breed yet 😢", preferredStyle: .alert)
+        alert.addAction(.init(title: "Ok", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
 }
 
 // MARK: - UICollectionViewDelegate
 extension BreedsCollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard viewModel.hasAvailableBreedFor(indexPath.row) else { return }
+        guard viewModel.hasAvailableBreedFor(indexPath.row) else {
+            showEmptyBreedFeedback()
+            return
+        }
         performSegue(withIdentifier: Identifier.Segue.goToBreedDetail, sender: self)
     }
 }
