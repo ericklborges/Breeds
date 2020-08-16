@@ -14,10 +14,12 @@ target 'Breeds' do
       "TheDogAPIKey"
     ]
   }
+  
+  target 'BreedsTests' do
+    inherit! :search_paths
+    pod 'Quick', '~> 3.0'
+    pod 'Nimble', '~>8.1.1'
+    pod 'Nimble-Snapshots', '~> 8.2.1'
+  end
 end
 
-target 'BreedsTests' do
-  pod 'Quick', '~> 3.0'
-  pod 'Nimble', '~>8.1.1'
-  pod 'Nimble-Snapshots', '~> 8.2.1'
-end
