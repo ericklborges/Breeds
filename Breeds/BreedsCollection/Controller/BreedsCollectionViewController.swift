@@ -8,8 +8,11 @@
 
 import UIKit
 
-class BreedsCollectionViewController: UICollectionViewController {
+class BreedsCollectionViewController: UIViewController {
 
+    // MARK: Views
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     // MARK: Properties
     private lazy var viewModel = BreedsCollectionViewModel(delegate: self)
     
@@ -18,7 +21,6 @@ class BreedsCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         setupNavigation()
         viewModel.fetchImages()
-        collectionView.prefetchDataSource = self
     }
     
     func setupNavigation() {
@@ -46,41 +48,38 @@ extension BreedsCollectionViewController {
     }
 }
 
-// MARK: - UICollectionViewDelegate
-extension BreedsCollectionViewController {
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+// MARK: - UICollectionViewDelegateFlowLayout
+extension BreedsCollectionViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard viewModel.hasAvailableBreedFor(indexPath.row) else {
             showEmptyBreedFeedback()
             return
         }
         performSegue(withIdentifier: Identifier.Segue.goToBreedDetail, sender: self)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let size = UIScreen.main.bounds.width / 2
+        return CGSize(width: size, height: size)
+    }
 }
 
 // MARK: - UICollectionViewDataSource
-extension BreedsCollectionViewController {
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+extension BreedsCollectionViewController: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.images.count
     }
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifier.Cell.breedCell, for: indexPath) as? BreedCollectionViewCell else {
              return UICollectionViewCell()
         }
         cell.setup(image: viewModel.images[indexPath.row])
         return cell
-    }
-}
-
-// MARK: - UICollectionViewDelegateFlowLayout
-extension BreedsCollectionViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = UIScreen.main.bounds.width / 2
-        return CGSize(width: size, height: size)
     }
 }
 
