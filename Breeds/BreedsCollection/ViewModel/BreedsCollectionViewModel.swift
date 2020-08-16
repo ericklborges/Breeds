@@ -23,6 +23,8 @@ class BreedsCollectionViewModel {
     weak var delegate: BreedsCollectionViewModelDelegate?
     
     private(set) var images: [Image] = []
+    private(set) var currentSelectedBreed: Breed?
+    private(set) var currentSelectedImage: Image?
     
     // MARK: Init
     init(delegate: BreedsCollectionViewModelDelegate, manager: RequestManager = RequestManagerFactory.create()) {
@@ -31,6 +33,14 @@ class BreedsCollectionViewModel {
     }
     
     // MARK: Methods
+    func hasAvailableBreedFor(_ row: Int) -> Bool {
+        let image = images[row]
+        guard let breed = image.breeds.first else { return false }
+        currentSelectedImage = image
+        currentSelectedBreed = breed
+        return true
+    }
+    
     func shouldPrefetchImages(for indexPaths: [IndexPath]) -> Bool {
         guard
             !isFetching,

@@ -27,6 +27,27 @@ class BreedsCollectionViewController: UICollectionViewController {
     }
 }
 
+// MARK: - Navigation
+extension BreedsCollectionViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard
+            segue.identifier == Identifier.Segue.goToBreedDetail,
+            let breedDetailController = segue.destination as? BreedDetailViewController
+            else { return }
+        
+        breedDetailController.breed = viewModel.currentSelectedBreed
+        breedDetailController.imageUrl = viewModel.currentSelectedImage?.url
+    }
+}
+
+// MARK: - UICollectionViewDelegate
+extension BreedsCollectionViewController {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard viewModel.hasAvailableBreedFor(indexPath.row) else { return }
+        performSegue(withIdentifier: Identifier.Segue.goToBreedDetail, sender: self)
+    }
+}
+
 // MARK: - UICollectionViewDataSource
 extension BreedsCollectionViewController {
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -43,13 +64,6 @@ extension BreedsCollectionViewController {
         }
         cell.setup(image: viewModel.images[indexPath.row])
         return cell
-    }
-}
-
-// MARK: - UICollectionViewDelegate
-extension BreedsCollectionViewController {
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: Identifier.Segue.goToBreedDetail, sender: self)
     }
 }
 
