@@ -5,6 +5,7 @@
 //  Created by erick.lozano.borges on 10/08/20.
 //  Copyright © 2020 borges.erick. All rights reserved.
 //
+// swiftlint:disable nesting
 
 import Foundation
 
