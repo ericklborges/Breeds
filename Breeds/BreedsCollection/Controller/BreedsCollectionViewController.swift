@@ -9,7 +9,7 @@
 import UIKit
 
 class BreedsCollectionViewController: UIViewController {
-
+    
     // MARK: Views
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -31,14 +31,19 @@ class BreedsCollectionViewController: UIViewController {
 
 // MARK: - Navigation
 extension BreedsCollectionViewController {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    func showDetailForSelectedBreed() {
         guard
-            segue.identifier == Identifier.Segue.goToBreedDetail,
-            let breedDetailController = segue.destination as? BreedDetailViewController
+            let selectedBreed = viewModel.currentSelectedBreed,
+            let selectedImageUrl = viewModel.currentSelectedImage?.url
             else { return }
         
-        breedDetailController.breed = viewModel.currentSelectedBreed
-        breedDetailController.imageUrl = viewModel.currentSelectedImage?.url
+        let storyboard = UIStoryboard(name: Identifier.Storyboard.Main.name, bundle: Bundle(for: Self.self))
+        
+        let breedDetailController = storyboard.instantiateViewController(identifier: Identifier.Storyboard.Main.breedDetailViewController, creator: { coder in
+            return BreedDetailViewController(coder: coder, breed: selectedBreed, imageUrl: selectedImageUrl)
+        })
+        
+        show(breedDetailController, sender: self)
     }
     
     private func showEmptyBreedFeedback() {
@@ -55,7 +60,7 @@ extension BreedsCollectionViewController: UICollectionViewDelegateFlowLayout {
             showEmptyBreedFeedback()
             return
         }
-        performSegue(withIdentifier: Identifier.Segue.goToBreedDetail, sender: self)
+        showDetailForSelectedBreed()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -76,7 +81,7 @@ extension BreedsCollectionViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifier.Cell.breedCell, for: indexPath) as? BreedCollectionViewCell else {
-             return UICollectionViewCell()
+            return UICollectionViewCell()
         }
         cell.setup(image: viewModel.images[indexPath.row])
         return cell

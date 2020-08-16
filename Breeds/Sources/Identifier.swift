@@ -9,11 +9,18 @@
 import Foundation
 
 enum Identifier {
+    enum Storyboard {
+        enum Main {
+            static let name = "Main"
+            static let breedDetailViewController = "BreedDetailViewController"
+        }
+    }
+    
     enum Cell {
         static let breedCell = "BreedCell"
     }
     
     enum Segue {
         static let goToBreedDetail = "GoToBreedDetail"
-    }
+    }   
 }

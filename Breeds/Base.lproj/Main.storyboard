@@ -11,7 +11,7 @@
         <!--Breed Detail View Controller-->
         <scene sceneID="znW-8f-xDw">
             <objects>
-                <viewController id="pp4-YL-q74" customClass="BreedDetailViewController" customModule="Breeds" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BreedDetailViewController" id="pp4-YL-q74" customClass="BreedDetailViewController" customModule="Breeds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="77C-0b-YdB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
