@@ -11,7 +11,24 @@ import UIKit
 class BreedsCollectionViewController: UIViewController {
     
     // MARK: Views
-    @IBOutlet weak var collectionView: UICollectionView!
+    let collectionFlowLayout: UICollectionViewFlowLayout = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = .zero
+        layout.minimumInteritemSpacing = .zero
+        return layout
+    }()
+    
+    lazy var collectionView: UICollectionView = {
+        let collection = UICollectionView(frame: .zero, collectionViewLayout: collectionFlowLayout)
+        collection.delegate = self
+        collection.dataSource = self
+        collection.prefetchDataSource = self
+        collection.backgroundColor = BackgroundColor.main
+        collection.register(BreedCollectionViewCell.self, forCellWithReuseIdentifier: Identifier.Cell.breedCell)
+        collection.translatesAutoresizingMaskIntoConstraints = false
+        return collection
+    }()
     
     // MARK: Properties
     private lazy var viewModel = BreedsCollectionViewModel(delegate: self)
@@ -19,13 +36,32 @@ class BreedsCollectionViewController: UIViewController {
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
         setupNavigation()
         viewModel.fetchImages()
     }
     
+    // MARK: Setup
     func setupNavigation() {
+        title = "Breeds"
         navigationController?.applyCustomAppearence()
         navigationController?.navigationBar.prefersLargeTitles = true
+    }
+}
+
+// MARK: - Autolayout
+extension BreedsCollectionViewController: ViewCodable {
+    func setupViewHierarchy() {
+        view.addSubview(collectionView)
+    }
+    
+    func setupConstraints() {
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
     }
 }
 
