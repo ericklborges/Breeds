@@ -11,7 +11,7 @@
 extension Image {
     static func stub(
         breeds: [Breed] = [.stub()],
-        url: String = "https://fotos.amomeupet.org/uploads/fotos/1300x0_1568662224_5d7fe2d09bccd.jpeg") -> Image {
+        url: String = "") -> Image {
         return Image(breeds: breeds, url: url)
     }
 }
