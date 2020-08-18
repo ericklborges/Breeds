@@ -16,8 +16,9 @@
 		3748872E24D75B52003A2F4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3748872C24D75B52003A2F4C /* Main.storyboard */; };
 		3748873024D75B54003A2F4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3748872F24D75B54003A2F4C /* Assets.xcassets */; };
 		3748873324D75B54003A2F4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3748873124D75B54003A2F4C /* LaunchScreen.storyboard */; };
-		3748873E24D75B54003A2F4C /* BreedsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748873D24D75B54003A2F4C /* BreedsTests.swift */; };
 		378CBBB524E49D1E003A641B /* BreedsCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378CBBB424E49D1E003A641B /* BreedsCollectionViewModel.swift */; };
+		37963D2724EB550500DDC936 /* caramelo_dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37963D2624EB550500DDC936 /* caramelo_dog.jpg */; };
+		37963D2924EB551C00DDC936 /* AssetHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37963D2824EB551C00DDC936 /* AssetHelper.swift */; };
 		37A84D6B24E20FE70006AF73 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A84D6A24E20FE70006AF73 /* Colors.swift */; };
 		37A84D7024E213300006AF73 /* UIColor+Boilerplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A84D6E24E212EE0006AF73 /* UIColor+Boilerplate.swift */; };
 		37A84D7324E2205B0006AF73 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A84D7224E2205B0006AF73 /* Identifier.swift */; };
@@ -62,9 +63,10 @@
 		3748873224D75B54003A2F4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3748873424D75B54003A2F4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3748873924D75B54003A2F4C /* BreedsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreedsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3748873D24D75B54003A2F4C /* BreedsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsTests.swift; sourceTree = "<group>"; };
 		3748873F24D75B54003A2F4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		378CBBB424E49D1E003A641B /* BreedsCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsCollectionViewModel.swift; sourceTree = "<group>"; };
+		37963D2624EB550500DDC936 /* caramelo_dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = caramelo_dog.jpg; sourceTree = "<group>"; };
+		37963D2824EB551C00DDC936 /* AssetHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetHelper.swift; sourceTree = "<group>"; };
 		37A84D6A24E20FE70006AF73 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		37A84D6E24E212EE0006AF73 /* UIColor+Boilerplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Boilerplate.swift"; sourceTree = "<group>"; };
 		37A84D7224E2205B0006AF73 /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
@@ -193,9 +195,10 @@
 		3748873C24D75B54003A2F4C /* BreedsTests */ = {
 			isa = PBXGroup;
 			children = (
-				37C4BA8624E9F2910071659E /* Stubs */,
-				3748873D24D75B54003A2F4C /* BreedsTests.swift */,
 				3748873F24D75B54003A2F4C /* Info.plist */,
+				37963D2524EB54F000DDC936 /* Assets */,
+				37C4BA8624E9F2910071659E /* Stubs */,
+				37963D2424EB54F000DDC936 /* Utils */,
 			);
 			path = BreedsTests;
 			sourceTree = "<group>";
@@ -206,6 +209,22 @@
 				378CBBB424E49D1E003A641B /* BreedsCollectionViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		37963D2424EB54F000DDC936 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				37963D2824EB551C00DDC936 /* AssetHelper.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		37963D2524EB54F000DDC936 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				37963D2624EB550500DDC936 /* caramelo_dog.jpg */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		37A84D6824E20FBC0006AF73 /* Sources */ = {
@@ -436,6 +455,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37963D2724EB550500DDC936 /* caramelo_dog.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,9 +592,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37963D2924EB551C00DDC936 /* AssetHelper.swift in Sources */,
 				37C4BA8824E9F2A30071659E /* Breed+Stub.swift in Sources */,
 				37C4BA8A24E9F2AE0071659E /* Image+Stub.swift in Sources */,
-				3748873E24D75B54003A2F4C /* BreedsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
