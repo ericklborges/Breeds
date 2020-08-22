@@ -73,12 +73,7 @@ extension BreedsCollectionViewController {
             let selectedImageUrl = viewModel.currentSelectedImage?.url
             else { return }
         
-        let storyboard = UIStoryboard(name: Identifier.Storyboard.Main.name, bundle: Bundle(for: Self.self))
-        
-        let breedDetailController = storyboard.instantiateViewController(identifier: Identifier.Storyboard.Main.breedDetailViewController, creator: { coder in
-            return BreedDetailViewController(coder: coder, breed: selectedBreed, imageUrl: selectedImageUrl)
-        })
-        
+        let breedDetailController = BreedDetailViewController(breed: selectedBreed, imageUrl: selectedImageUrl)
         show(breedDetailController, sender: self)
     }
     

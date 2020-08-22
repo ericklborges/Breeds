@@ -19,6 +19,7 @@
 		378CBBB524E49D1E003A641B /* BreedsCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378CBBB424E49D1E003A641B /* BreedsCollectionViewModel.swift */; };
 		37963D2724EB550500DDC936 /* caramelo_dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37963D2624EB550500DDC936 /* caramelo_dog.jpg */; };
 		37963D2924EB551C00DDC936 /* AssetHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37963D2824EB551C00DDC936 /* AssetHelper.swift */; };
+		37963D2D24EB646A00DDC936 /* BreedDetailViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37963D2C24EB646A00DDC936 /* BreedDetailViewSpec.swift */; };
 		379E67E124E9F53E00EFB899 /* BreedCollectionViewCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379E67E024E9F53E00EFB899 /* BreedCollectionViewCellSpec.swift */; };
 		379E67EA24E9F9F000EFB899 /* ReferenceImages in Resources */ = {isa = PBXBuildFile; fileRef = 379E67E924E9F9F000EFB899 /* ReferenceImages */; };
 		37A84D6B24E20FE70006AF73 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A84D6A24E20FE70006AF73 /* Colors.swift */; };
@@ -69,6 +70,7 @@
 		378CBBB424E49D1E003A641B /* BreedsCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsCollectionViewModel.swift; sourceTree = "<group>"; };
 		37963D2624EB550500DDC936 /* caramelo_dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = caramelo_dog.jpg; sourceTree = "<group>"; };
 		37963D2824EB551C00DDC936 /* AssetHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetHelper.swift; sourceTree = "<group>"; };
+		37963D2C24EB646A00DDC936 /* BreedDetailViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailViewSpec.swift; sourceTree = "<group>"; };
 		379E67E024E9F53E00EFB899 /* BreedCollectionViewCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedCollectionViewCellSpec.swift; sourceTree = "<group>"; };
 		379E67E924E9F9F000EFB899 /* ReferenceImages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ReferenceImages; sourceTree = "<group>"; };
 		37A84D6A24E20FE70006AF73 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -201,10 +203,11 @@
 			children = (
 				379E67E924E9F9F000EFB899 /* ReferenceImages */,
 				3748873F24D75B54003A2F4C /* Info.plist */,
+				37963D2C24EB646A00DDC936 /* BreedDetailViewSpec.swift */,
 				379E67E024E9F53E00EFB899 /* BreedCollectionViewCellSpec.swift */,
 				37963D2524EB54F000DDC936 /* Assets */,
 				37C4BA8624E9F2910071659E /* Stubs */,
-				37963D2424EB54F000DDC936 /* Utils */
+				37963D2424EB54F000DDC936 /* Utils */,
 			);
 			path = BreedsTests;
 			sourceTree = "<group>";
@@ -599,6 +602,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37963D2D24EB646A00DDC936 /* BreedDetailViewSpec.swift in Sources */,
 				37963D2924EB551C00DDC936 /* AssetHelper.swift in Sources */,
 				37C4BA8824E9F2A30071659E /* Breed+Stub.swift in Sources */,
 				37C4BA8A24E9F2AE0071659E /* Image+Stub.swift in Sources */,

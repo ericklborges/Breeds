@@ -11,20 +11,27 @@ import UIKit
 class BreedDetailViewController: UIViewController {
 
     // MARK: Views
-    @IBOutlet weak var baseView: BreedDetailView!
+    let baseView = BreedDetailView()
     
     // MARK: Properties
-    var breed: Breed
-    var imageUrl: String
+    let breed: Breed
+    let imageUrl: String
     
-    init? (coder: NSCoder, breed: Breed, imageUrl: String) {
+    // MARK: Init
+    init(breed: Breed, imageUrl: String) {
         self.breed = breed
         self.imageUrl = imageUrl
-        super.init(coder: coder)
+        super.init(nibName: nil, bundle: nil)
     }
     
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
-        preconditionFailure("You must create this view controller with a Breed and an ImageUrl.")
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: Life Cycle
+    override func loadView() {
+        view = baseView
     }
     
     override func viewDidLoad() {
@@ -32,8 +39,10 @@ class BreedDetailViewController: UIViewController {
         setup()
     }
     
+    // MARK: Setup
     private func setup() {
         title = breed.name
+        navigationItem.largeTitleDisplayMode = .never
         baseView.setup(breed: breed, imageUrl: imageUrl)
     }
 }
