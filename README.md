@@ -7,20 +7,20 @@ Este é um aplicativo feito para o estudo de diferentes abordagens de desenvolvi
 1. Gerar API Key em [thedogapi.com](http://thedogapi.com)
 2.  Instalar o Bundler:  `$ sudo gem install bundler`
 
-💎 O Bundler é um gerenciador de gemas (aplicações em ruby), e neste caso estamos instalando ele para usar a ferramenta `cocoapods-keys`, como pode ser visto no arquivo `Gemflie` na raiz do projeto. Esta ferramenta nos ajuda a evitar que nossas chaves privadas subam para o repositório.
+💎 O Bundler é um gerenciador de gemas (aplicações em ruby), e neste caso estamos instalando ele para usar a ferramenta `cocoapods-keys`, como pode ser visto no arquivo `Gemfile` na raiz do projeto. Esta ferramenta nos ajuda a evitar que nossas chaves privadas subam para o repositório.
 
 3. Clonar o [repositório](https://github.com/ericklborges/Breeds)
 4. Instalar Gemas  `$ Bundler install`
 5. Instalar dependências do projeto `$ Bundle exec pod install`
 6. Quando solicitado,  entrar com API Key solicitada no terminal
 
-## Refatorando storyboard para View Coding
+## Refatorando Storyboard para View Coding
 
-O passo a passo a seguir detalha a refatoração da camade de View deste projeto de Storyboard+Xibs para View Coding usando UIKit.
+O passo a passo a seguir detalha a refatoração da camada de de View deste projeto, de Storyboard + Xibs para View Coding usando UIKit.
 
-Você pode dar um checkout para a branch `viewCode/Storyboard`, ou para a tag `live-code-start` para navegar até o momento do inicial deste tutorial.
+Você pode dar um checkout para a branch `viewCode/Storyboard`, ou para a tag `live-code-start` para navegar até o momento inicial deste tutorial.
 
-🏷 As tags marcadas ao longo do passo a passo te levam para o ponto do desenvolvimento onde estão. Navegue até a pasta do projeto, e digite o comando `$ git checkout <tag-name>` no terminal para usar uma a tag. (e.g. o comando `$ git checkout live-code-start` te leva ao commit inicial do passo a passo a seguir)
+🏷 As tags marcadas ao longo do passo a passo te levam para o ponto do desenvolvimento onde estão. Navegue até a pasta do projeto, e digite o comando `$ git checkout <tag-name>` no terminal para usar uma tag. (e.g. o comando `$ git checkout live-code-start` te leva ao commit inicial do passo a passo a seguir)
 
 ## Passo a passo
 
@@ -97,7 +97,7 @@ let nameLabel: UILabel = {
 
 <details>
 <summary>
-4. Criar <b>extension</b> com adicionando <b>views</b> e configurando <b>constraints</b>
+4. Criar <b>extension</b> adicionando <b>views</b> e configurando <b>constraints</b>
 </summary> 
 <p>
   
@@ -182,8 +182,8 @@ extension ViewCodable {
 }
 
 // MARK: Life Cycle
-override init(frame: CGRect) {
-    super.init(frame: .zero)
+override init(frame: CGRect = .zero) {
+    super.init(frame: frame)
     setupViews()
 }
 ```
