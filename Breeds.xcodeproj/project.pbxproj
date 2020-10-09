@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		373EA9D524DCC0B800A2F236 /* TheDogAPIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE2BD824DB6677000590C6 /* TheDogAPIConfig.swift */; };
-		373EA9DC24DCC22D00A2F236 /* ImagesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373EA9DB24DCC22D00A2F236 /* ImagesAPI.swift */; };
-		373EA9DE24DCC29B00A2F236 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373EA9DD24DCC29B00A2F236 /* Image.swift */; };
+		373EA9D524DCC0B800A2F236 /* TheDogAPISources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE2BD824DB6677000590C6 /* TheDogAPISources.swift */; };
+		373EA9DC24DCC22D00A2F236 /* BreedImagesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373EA9DB24DCC22D00A2F236 /* BreedImagesAPI.swift */; };
+		373EA9DE24DCC29B00A2F236 /* BreedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373EA9DD24DCC29B00A2F236 /* BreedImage.swift */; };
 		3744774F24DB969200D90286 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744774E24DB969200D90286 /* Breed.swift */; };
 		3748872724D75B52003A2F4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748872624D75B52003A2F4C /* AppDelegate.swift */; };
 		3748872924D75B52003A2F4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748872824D75B52003A2F4C /* SceneDelegate.swift */; };
@@ -55,8 +55,9 @@
 /* Begin PBXFileReference section */
 		16ED894158264549FFF536FF /* Pods_Breeds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Breeds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B008D59051ECCFC609BCC1E /* Pods-BreedsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreedsTests.debug.xcconfig"; path = "Target Support Files/Pods-BreedsTests/Pods-BreedsTests.debug.xcconfig"; sourceTree = "<group>"; };
-		373EA9DB24DCC22D00A2F236 /* ImagesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesAPI.swift; sourceTree = "<group>"; };
-		373EA9DD24DCC29B00A2F236 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		1BA5E3244A9D78DE74D2D5B8 /* Pods_BreedsWidgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BreedsWidgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		373EA9DB24DCC22D00A2F236 /* BreedImagesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImagesAPI.swift; sourceTree = "<group>"; };
+		373EA9DD24DCC29B00A2F236 /* BreedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImage.swift; sourceTree = "<group>"; };
 		3744774E24DB969200D90286 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		3748872324D75B52003A2F4C /* Breeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breeds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3748872624D75B52003A2F4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -121,7 +122,7 @@
 		373EA9D724DCC18E00A2F236 /* TheDogAPI */ = {
 			isa = PBXGroup;
 			children = (
-				37EE2BD824DB6677000590C6 /* TheDogAPIConfig.swift */,
+				37EE2BD824DB6677000590C6 /* TheDogAPISources.swift */,
 				373EA9D824DCC1C200A2F236 /* Images */,
 			);
 			path = TheDogAPI;
@@ -139,7 +140,7 @@
 		373EA9D924DCC1D700A2F236 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				373EA9DB24DCC22D00A2F236 /* ImagesAPI.swift */,
+				373EA9DB24DCC22D00A2F236 /* BreedImagesAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -148,7 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				3744774E24DB969200D90286 /* Breed.swift */,
-				373EA9DD24DCC29B00A2F236 /* Image.swift */,
+				373EA9DD24DCC29B00A2F236 /* BreedImage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

@@ -1,5 +1,5 @@
 //
-//  ImagesAPI.swift
+//  BreedImagesAPI.swift
 //  Breeds
 //
 //  Created by erick.lozano.borges on 06/08/20.
@@ -8,15 +8,15 @@
 
 import Foundation
 
-class ImagesAPI {
+class BreedImagesAPI {
     
     private let manager: RequestManager
     
-    init(manager: RequestManager) {
+    init(manager: RequestManager = RequestManagerFactory.create()) {
         self.manager = manager
     }
     
-    func fetchImages(limit: Int, page: Int, completion: @escaping(Result<[Image], Error>) -> Void) {
+    func fetchImages(limit: Int, page: Int, completion: @escaping(Result<[BreedImage], Error>) -> Void) {
         let url = TheDogAPISources.baseUrl.appendingPathComponent("/v1/images/search")
         let headers = TheDogAPISources.authHeader
         

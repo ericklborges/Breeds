@@ -1,5 +1,5 @@
 //
-//  Image.swift
+//  BreedImage.swift
 //  Breeds
 //
 //  Created by erick.lozano.borges on 06/08/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Image: Codable {
+struct BreedImage: Decodable {
     let breeds: [Breed]
     let url: String
 }

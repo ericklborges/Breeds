@@ -19,17 +19,17 @@ class BreedsCollectionViewModel {
     private let pageSize = 20
     private var currentPage = 0
     private var isFetching = false
-    private let imagesApi: ImagesAPI
+    private let breedImagesAPI: BreedImagesAPI
     weak var delegate: BreedsCollectionViewModelDelegate?
     
-    private(set) var images: [Image] = []
+    private(set) var images: [BreedImage] = []
     private(set) var currentSelectedBreed: Breed?
-    private(set) var currentSelectedImage: Image?
+    private(set) var currentSelectedImage: BreedImage?
     
     // MARK: Init
     init(delegate: BreedsCollectionViewModelDelegate, manager: RequestManager = RequestManagerFactory.create()) {
         self.delegate = delegate
-        self.imagesApi = ImagesAPI(manager: manager)
+        self.breedImagesAPI = BreedImagesAPI(manager: manager)
     }
     
     // MARK: Methods
@@ -62,7 +62,7 @@ class BreedsCollectionViewModel {
 extension BreedsCollectionViewModel {
     func fetchImages() {
         isFetching = true
-        imagesApi.fetchImages(limit: pageSize, page: currentPage) { [weak self] result in
+        breedImagesAPI.fetchImages(limit: pageSize, page: currentPage) { [weak self] result in
             switch result {
             case let .success(images):
                 self?.handleSuccess(with: images)
@@ -74,7 +74,7 @@ extension BreedsCollectionViewModel {
         }
     }
     
-    private func handleSuccess(with images: [Image]) {
+    private func handleSuccess(with images: [BreedImage]) {
         self.images.append(contentsOf: images)
         currentPage += 1
         delegate?.didReceiveImages()

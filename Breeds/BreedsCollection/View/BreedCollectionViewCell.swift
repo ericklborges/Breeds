@@ -65,7 +65,7 @@ class BreedCollectionViewCell: UICollectionViewCell {
     }
     
     // MARK: Setup
-    func setup(image: Image) {
+    func setup(image: BreedImage) {
         nameLabel.text = image.breeds.first?.name ?? "Breed not identified"
         imageView.setImage(url: URL(string: image.url))
     }
