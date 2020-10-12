@@ -9,19 +9,28 @@
 import UIKit
 
 class BreedDetailViewController: UIViewController {
-
+    
     // MARK: Views
-    let baseView = BreedDetailView()
+    private let baseView = BreedDetailView()
     
     // MARK: Properties
-    let breed: Breed
-    let imageUrl: String
+    private var breed: Breed?
+    private var imageUrl: String?
+    private let breedImageId: String?
+    private lazy var viewModel = BreedDetailViewModel(delegate: self)
     
     // MARK: Init
     init(breed: Breed, imageUrl: String) {
         self.breed = breed
         self.imageUrl = imageUrl
+        self.breedImageId = nil
         super.init(nibName: nil, bundle: nil)
+    }
+    
+    init(breedImageId: String) {
+        self.breedImageId = breedImageId
+        super.init(nibName: nil, bundle: nil)
+        viewModel.fetchImage(by: breedImageId)
     }
     
     @available(*, unavailable)
@@ -41,8 +50,22 @@ class BreedDetailViewController: UIViewController {
     
     // MARK: Setup
     private func setup() {
-        title = breed.name
+        title = breed?.name
         navigationItem.largeTitleDisplayMode = .never
         baseView.setup(breed: breed, imageUrl: imageUrl)
+    }
+}
+
+// MARK: BreedDetailViewModelDelegate
+extension BreedDetailViewController: BreedDetailViewModelDelegate {
+    func didReceive(breedImage: BreedImage) {
+        guard let receivedBreed = breedImage.breeds.first else { return }
+        breed = receivedBreed
+        imageUrl = breedImage.url
+        setup()
+    }
+    
+    func didReceiveError() {
+        print("Detail Rrror State")
     }
 }

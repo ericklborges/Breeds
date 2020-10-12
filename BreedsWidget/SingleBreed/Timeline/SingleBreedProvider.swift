@@ -12,8 +12,9 @@ import class Kingfisher.KingfisherManager
 
 struct SingleBreedEntry: TimelineEntry {
     let date: Date
-    let breedName: String
-    let breedImage: UIImage
+    let id: String
+    let name: String
+    let image: UIImage
 }
 
 struct SingleBreedProvider: TimelineProvider {
@@ -29,12 +30,12 @@ struct SingleBreedProvider: TimelineProvider {
     }
     
     func placeholder(in context: Context) -> SingleBreedEntry {
-        return SingleBreedEntry(date: Date(), breedName: "placeholder", breedImage: UIImage())
+        return SingleBreedEntry(date: Date(), id: "id", name: "placeholder", image: UIImage())
     }
     
     func getSnapshot(in context: Context, completion: @escaping (SingleBreedEntry) -> Void) {
         let snaoshotImage = UIImage(named: "caramelo_dog")!
-        let snapshotEntry = SingleBreedEntry(date: Date(), breedName: "Caramelo Dog", breedImage: snaoshotImage)
+        let snapshotEntry = SingleBreedEntry(date: Date(), id: "id", name: "Caramelo Dog", image: snaoshotImage)
         completion(snapshotEntry)
     }
     
@@ -64,7 +65,7 @@ extension SingleBreedProvider {
                 
                 imageDownloadGroup.enter()
                 downloadImage(from: imageUrl) { downloadedImage in
-                    let entry = SingleBreedEntry(date: date, breedName: breedName, breedImage: downloadedImage)
+                    let entry = SingleBreedEntry(date: date, id: breedImage.id, name: breedName, image: downloadedImage)
                     entries.append(entry)
                     imageDownloadGroup.leave()
                 }

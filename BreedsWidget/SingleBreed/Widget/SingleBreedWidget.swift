@@ -27,7 +27,8 @@ struct SingleBreedEntryView: View {
     var entry: SingleBreedProvider.Entry
 
     var body: some View {
-        SingleBreedView(breedName: entry.breedName, breedImage: entry.breedImage)
+        SingleBreedView(breedName: entry.name, breedImage: entry.image)
+            .widgetURL(Deeplink.detail(breedImageId: entry.id).url)
     }
 }
 
@@ -35,8 +36,9 @@ struct BreedsWidget_Previews: PreviewProvider {
     static var previews: some View {
         let entry = SingleBreedEntry(
             date: Date(),
-            breedName: "Preview Dog",
-            breedImage: UIImage(named: "caramelo_dog")!
+            id: "id",
+            name: "Preview Dog",
+            image: UIImage(named: "caramelo_dog")!
         )
         
         Group {

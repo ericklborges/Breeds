@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37253A482534D6510024521D /* Deeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37253A472534D6510024521D /* Deeplink.swift */; };
+		37253A4E2534DAA90024521D /* Deeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37253A472534D6510024521D /* Deeplink.swift */; };
+		37253A552534DF980024521D /* BreedDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37253A542534DF980024521D /* BreedDetailViewModel.swift */; };
 		373EA9D524DCC0B800A2F236 /* TheDogAPISources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE2BD824DB6677000590C6 /* TheDogAPISources.swift */; };
 		373EA9DC24DCC22D00A2F236 /* BreedImagesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373EA9DB24DCC22D00A2F236 /* BreedImagesAPI.swift */; };
 		373EA9DE24DCC29B00A2F236 /* BreedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373EA9DD24DCC29B00A2F236 /* BreedImage.swift */; };
@@ -94,6 +97,8 @@
 		16ED894158264549FFF536FF /* Pods_Breeds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Breeds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B008D59051ECCFC609BCC1E /* Pods-BreedsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreedsTests.debug.xcconfig"; path = "Target Support Files/Pods-BreedsTests/Pods-BreedsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1BA5E3244A9D78DE74D2D5B8 /* Pods_BreedsWidgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BreedsWidgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37253A472534D6510024521D /* Deeplink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deeplink.swift; sourceTree = "<group>"; };
+		37253A542534DF980024521D /* BreedDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailViewModel.swift; sourceTree = "<group>"; };
 		373EA9DB24DCC22D00A2F236 /* BreedImagesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImagesAPI.swift; sourceTree = "<group>"; };
 		373EA9DD24DCC29B00A2F236 /* BreedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImage.swift; sourceTree = "<group>"; };
 		3744774E24DB969200D90286 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
@@ -178,6 +183,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37253A522534DF710024521D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				37253A542534DF980024521D /* BreedDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		373EA9D724DCC18E00A2F236 /* TheDogAPI */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +369,7 @@
 			children = (
 				37A84D6A24E20FE70006AF73 /* Colors.swift */,
 				37A84D7224E2205B0006AF73 /* Identifier.swift */,
+				37253A472534D6510024521D /* Deeplink.swift */,
 				3748872F24D75B54003A2F4C /* Assets.xcassets */,
 			);
 			path = Sources;
@@ -439,6 +453,7 @@
 			children = (
 				37FE93A124E86FE00075F99E /* Controller */,
 				37FE93A024E86FDC0075F99E /* View */,
+				37253A522534DF710024521D /* ViewModel */,
 			);
 			path = BreedDetail;
 			sourceTree = "<group>";
@@ -752,6 +767,7 @@
 			files = (
 				373EA9D524DCC0B800A2F236 /* TheDogAPISources.swift in Sources */,
 				37A84D7324E2205B0006AF73 /* Identifier.swift in Sources */,
+				37253A482534D6510024521D /* Deeplink.swift in Sources */,
 				373EA9DC24DCC22D00A2F236 /* BreedImagesAPI.swift in Sources */,
 				3744774F24DB969200D90286 /* Breed.swift in Sources */,
 				37A84D7524E222620006AF73 /* UINavigationController+CustomAppearence.swift in Sources */,
@@ -763,6 +779,7 @@
 				37C2308224DF4D7E00D82388 /* RequestManager.swift in Sources */,
 				37A84D6B24E20FE70006AF73 /* Colors.swift in Sources */,
 				37C2308824E09A4400D82388 /* BreedsCollectionViewController.swift in Sources */,
+				37253A552534DF980024521D /* BreedDetailViewModel.swift in Sources */,
 				37FE93AC24E8826C0075F99E /* NibLoadable.swift in Sources */,
 				3748872924D75B52003A2F4C /* SceneDelegate.swift in Sources */,
 				378CBBB524E49D1E003A641B /* BreedsCollectionViewModel.swift in Sources */,
@@ -794,6 +811,7 @@
 				375577B92518007C00468CC2 /* SingleBreedView.swift in Sources */,
 				377A9D522530BBE1009BD330 /* SingleBreedProvider.swift in Sources */,
 				377A9C5F252F831C009BD330 /* BreedImagesAPI.swift in Sources */,
+				37253A4E2534DAA90024521D /* Deeplink.swift in Sources */,
 				375577C3251801DE00468CC2 /* Colors.swift in Sources */,
 				377A9C68252F834A009BD330 /* AlamofireRequestManager.swift in Sources */,
 				377A9C67252F834A009BD330 /* RequestManager.swift in Sources */,
