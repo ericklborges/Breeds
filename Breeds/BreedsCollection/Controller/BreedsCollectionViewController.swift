@@ -71,9 +71,14 @@ extension BreedsCollectionViewController {
         guard
             let selectedBreed = viewModel.currentSelectedBreed,
             let selectedImageUrl = viewModel.currentSelectedImage?.url
-            else { return }
+        else { return }
         
         let breedDetailController = BreedDetailViewController(breed: selectedBreed, imageUrl: selectedImageUrl)
+        show(breedDetailController, sender: self)
+    }
+    
+    func showDetailWith(breedImageId: String) {
+        let breedDetailController = BreedDetailViewController(breedImageId: breedImageId)
         show(breedDetailController, sender: self)
     }
     
@@ -135,6 +140,7 @@ extension BreedsCollectionViewController: BreedsCollectionViewModelDelegate {
     }
     
     func didReceiveError() {
-        print("Error State")
+        print("Collection Rrror State")
     }
 }
+

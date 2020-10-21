@@ -28,4 +28,11 @@ class BreedImagesAPI {
         
         manager.request(url: url, method: .get, parameters: parameters, headers: headers, completion: completion)
     }
+    
+    func fetchImage(by id: String, completion: @escaping(Result<BreedImage, Error>) -> Void) {
+            let url = TheDogAPISources.baseUrl.appendingPathComponent("/v1/images/\(id)")
+            let headers = TheDogAPISources.authHeader
+            
+            manager.request(url: url, method: .get, parameters: [:], headers: headers, completion: completion)
+        }
 }
