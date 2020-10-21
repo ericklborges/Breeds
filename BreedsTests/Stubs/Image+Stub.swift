@@ -8,10 +8,10 @@
 
 @testable import Breeds
 
-extension Image {
+extension BreedImage {
     static func stub(
         breeds: [Breed] = [.stub()],
-        url: String = "") -> Image {
-        return Image(breeds: breeds, url: url)
+        url: String = "") -> BreedImage {
+        return BreedImage(breeds: breeds, url: url)
     }
 }

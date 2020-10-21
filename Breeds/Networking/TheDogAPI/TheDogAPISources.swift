@@ -1,5 +1,5 @@
 //
-//  TheDogAPIConfig.swift
+//  TheDogAPISources.swift
 //  Breeds
 //
 //  Created by erick.lozano.borges on 05/08/20.

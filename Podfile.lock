@@ -6,9 +6,9 @@ PODS:
   - iOSSnapshotTestCase/SwiftSupport (6.2.0):
     - iOSSnapshotTestCase/Core
   - Keys (1.0.1)
-  - Kingfisher (5.14.1):
-    - Kingfisher/Core (= 5.14.1)
-  - Kingfisher/Core (5.14.1)
+  - Kingfisher (5.15.5):
+    - Kingfisher/Core (= 5.15.5)
+  - Kingfisher/Core (5.15.5)
   - Nimble (8.1.1)
   - Nimble-Snapshots (8.2.1):
     - Nimble-Snapshots/Core (= 8.2.1)
@@ -21,17 +21,18 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - Keys (from `Pods/CocoaPodsKeys`)
-  - Kingfisher (~> 5.14)
+  - Kingfisher (~> 5.15.5)
   - Nimble (~> 8.1.1)
   - Nimble-Snapshots (~> 8.2.1)
   - Quick (~> 3.0)
   - SwiftLint (= 0.39.2)
 
 SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Kingfisher
   trunk:
     - Alamofire
     - iOSSnapshotTestCase
-    - Kingfisher
     - Nimble
     - Nimble-Snapshots
     - Quick
@@ -45,12 +46,12 @@ SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   iOSSnapshotTestCase: 9ab44cb5aa62b84d31847f40680112e15ec579a6
   Keys: a576f4c9c1c641ca913a959a9c62ed3f215a8de9
-  Kingfisher: 8050bc6f7f68cbf3908bd04df7ccbac188f6d6d6
+  Kingfisher: e3ec347a5ab8817b7585ef46923a2d2b9a7d8fbe
   Nimble: 5f8a2fb6fa343a7242dfdd9d42f7267419d464b2
   Nimble-Snapshots: 3a4750d83752625c8ebfdc588da105303ee2201e
   Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
 
-PODFILE CHECKSUM: ca598eb405ffdcaf77f1905afc46d7175e2f33c7
+PODFILE CHECKSUM: 165594b0ec8af89f4b331d626e2c75f8f7483164
 
 COCOAPODS: 1.9.3
