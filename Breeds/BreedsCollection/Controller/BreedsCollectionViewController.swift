@@ -143,4 +143,3 @@ extension BreedsCollectionViewController: BreedsCollectionViewModelDelegate {
         print("Collection Rrror State")
     }
 }
-
