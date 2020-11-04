@@ -22,8 +22,8 @@ target 'Breeds' do
     pod 'Nimble-Snapshots', '~> 8.2.1'
   end
   
-#  target 'BreedsWidgetExtension' do
-#    inherit! :search_paths
-#  end
+  target 'BreedsWidgetExtension' do
+    inherit! :search_paths
+  end
 end
 
