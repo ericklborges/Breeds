@@ -14,7 +14,15 @@ struct SingleBreedWidget: Widget {
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: "SingleBreedWidget", provider: SingleBreedProvider()) { entry in
-            SingleBreedView(breedName: "Cachorrineo", breedImage: UIImage(systemName: "applelogo")!)
+            SingleBreedEntryView(entry: entry)
         }
+    }
+}
+
+struct SingleBreedEntryView: View {
+    var entry: SingleBreedProvider.Entry
+    
+    var body: some View {
+        SingleBreedView(breedName: entry.name, breedImage: entry.image)
     }
 }
