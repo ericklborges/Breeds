@@ -16,6 +16,9 @@ struct SingleBreedWidget: Widget {
         StaticConfiguration(kind: "SingleBreedWidget", provider: SingleBreedProvider()) { entry in
             SingleBreedEntryView(entry: entry)
         }
+        .configurationDisplayName("Random breed")
+        .description("This widget provides a random breed that changes overtime.")
+        .supportedFamilies([.systemSmall, .systemLarge])
     }
 }
 
@@ -24,5 +27,24 @@ struct SingleBreedEntryView: View {
     
     var body: some View {
         SingleBreedView(breedName: entry.name, breedImage: entry.image)
+    }
+}
+
+struct BreedsWidget_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        let entry = SingleBreedEntry(
+            date: Date(),
+            name: "Cachorro Caramelo",
+            image: UIImage(named: "caramelo_dog")!
+        )
+        
+        Group {
+            SingleBreedEntryView(entry: entry)
+                .previewContext(WidgetPreviewContext(family: .systemSmall))
+            
+            SingleBreedEntryView(entry: entry)
+                .previewContext(WidgetPreviewContext(family: .systemLarge))
+        }
     }
 }
