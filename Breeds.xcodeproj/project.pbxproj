@@ -35,6 +35,12 @@
 		37C2308824E09A4400D82388 /* BreedsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2308724E09A4400D82388 /* BreedsCollectionViewController.swift */; };
 		37C2308C24E09C5600D82388 /* BreedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2308B24E09C5600D82388 /* BreedCollectionViewCell.swift */; };
 		37C2308F24E09F0C00D82388 /* UIImage+SetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2308E24E09F0C00D82388 /* UIImage+SetImage.swift */; };
+		37C34D99255C08F40071FC1B /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744774E24DB969200D90286 /* Breed.swift */; };
+		37C34D9A255C08F40071FC1B /* BreedImagesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373EA9DB24DCC22D00A2F236 /* BreedImagesAPI.swift */; };
+		37C34D9B255C08F40071FC1B /* BreedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373EA9DD24DCC29B00A2F236 /* BreedImage.swift */; };
+		37C34D9C255C08F40071FC1B /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2308124DF4D7E00D82388 /* RequestManager.swift */; };
+		37C34D9D255C08F40071FC1B /* TheDogAPISources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE2BD824DB6677000590C6 /* TheDogAPISources.swift */; };
+		37C34DA1255C09050071FC1B /* AlamofireRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2308324DF4DC500D82388 /* AlamofireRequestManager.swift */; };
 		37C4BA8824E9F2A30071659E /* Breed+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C4BA8724E9F2A30071659E /* Breed+Stub.swift */; };
 		37C4BA8A24E9F2AE0071659E /* Image+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C4BA8924E9F2AE0071659E /* Image+Stub.swift */; };
 		37E11D8025596178000DF2DE /* SingleBreedWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E11D7525595EFF000DF2DE /* SingleBreedWidget.swift */; };
@@ -799,11 +805,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37C34D9B255C08F40071FC1B /* BreedImage.swift in Sources */,
+				37C34D99255C08F40071FC1B /* Breed.swift in Sources */,
+				37C34D9D255C08F40071FC1B /* TheDogAPISources.swift in Sources */,
 				37E11D8D255965FB000DF2DE /* SingleBreedProvider.swift in Sources */,
 				37F89DF42553613600EB268A /* SingleBreedView.swift in Sources */,
 				370654892553639D00C9E9BA /* Colors.swift in Sources */,
+				37C34D9A255C08F40071FC1B /* BreedImagesAPI.swift in Sources */,
+				37C34D9C255C08F40071FC1B /* RequestManager.swift in Sources */,
 				37E11D8025596178000DF2DE /* SingleBreedWidget.swift in Sources */,
 				37065497255363D500C9E9BA /* UIColor+Boilerplate.swift in Sources */,
+				37C34DA1255C09050071FC1B /* AlamofireRequestManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

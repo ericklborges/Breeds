@@ -8,40 +8,96 @@
 
 import SwiftUI
 import WidgetKit
+import class Kingfisher.KingfisherManager
 
 struct SingleBreedEntry: TimelineEntry {
-    var date: Date
-    var name: String
-    var image: UIImage
+    let date: Date
+    let name: String
+    let image: UIImage
 }
 
 struct SingleBreedProvider: TimelineProvider {
     typealias Entry = SingleBreedEntry
     
+    private let api = BreedImagesAPI()
+    private let imageDownloadGroup = DispatchGroup()
+    
+    private let entryDuration: Int = 5
+    private let pageItemsLimit: Int = 53
+    private var page: Int {
+        return .random(in: 0...2)
+    }
+    
     func placeholder(in context: Context) -> SingleBreedEntry {
-        let entry = SingleBreedEntry(date: Date(), name: String(), image: UIImage())
-        return entry
+        return SingleBreedEntry(date: Date(), name: "placeholder", image: UIImage())
     }
     
     func getSnapshot(in context: Context, completion: @escaping (SingleBreedEntry) -> Void) {
-        let snapshotImage = UIImage(named: "caramelo_dog")!
-        let entry = SingleBreedEntry(date: Date(), name: "Caramelo Dog", image: snapshotImage)
-        completion(entry)
+        let snaoshotImage = UIImage(named: "caramelo_dog")!
+        let snapshotEntry = SingleBreedEntry(date: Date(), name: "Caramelo Dog", image: snaoshotImage)
+        completion(snapshotEntry)
     }
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<SingleBreedEntry>) -> Void) {
-        var entries: [SingleBreedEntry] = []
-        let names: [String] = ["Cachorro Caramelo", "Labradoodle", "Chihu3hu3", "Galgo Inglês", "Corgi", "Zwergspitz"]
-        let carameloDogImage = UIImage(named: "caramelo_dog")!
-        
-        for (i, name) in names.enumerated() {
-            let timeInterval = 5 * i
-            let date = Calendar.current.date(byAdding: .second, value: timeInterval, to: Date())!
-            let entry = SingleBreedEntry(date: date, name: name, image: carameloDogImage)
-            entries.append(entry)
+        fetchEntries { entries in
+            let timeline = Timeline(entries: entries, policy: .atEnd)
+            completion(timeline)
         }
+    }
+}
+
+// MARK: - Networking
+
+extension SingleBreedProvider {
+    
+    private func fetchEntries(completion: @escaping ([SingleBreedEntry]) -> Void) {
+        var entries: [SingleBreedEntry] = []
         
-        let timeline = Timeline(entries: entries, policy: .atEnd)
-        completion(timeline)
+        fetchBreedImages { breedImages in
+            
+            breedImages.enumerated().forEach { i, breedImage in
+                guard
+                    let date = Calendar.current.date(byAdding: .second, value: entryDuration*i, to: Date()),
+                    let breedName = breedImage.breeds.first?.name,
+                    let imageUrl = URL(string: breedImage.url)
+                else { return }
+                
+                imageDownloadGroup.enter()
+                downloadImage(from: imageUrl) { downloadedImage in
+                    let entry = SingleBreedEntry(date: date, name: breedName, image: downloadedImage)
+                    entries.append(entry)
+                    imageDownloadGroup.leave()
+                }
+            }
+            
+            imageDownloadGroup.notify(queue: .main) {
+                completion(entries)
+            }
+        }
+    }
+    
+    private func fetchBreedImages(completion: @escaping ([BreedImage]) -> Void) {
+        api.fetchImages(limit: pageItemsLimit, page: page) { result in
+            switch result {
+            case let .success(breedImages):
+                let suffled = breedImages.shuffled()
+                let firstTenSuffled = Array(suffled[0...10])
+                completion(firstTenSuffled)
+            case let .failure(error):
+                print("Error: failed to request breed images \(error)")
+            }
+        }
+    }
+    
+    private func downloadImage(from url: URL, completion: @escaping (UIImage) -> Void) {
+        KingfisherManager.shared.retrieveImage(with: url) { result in
+            switch result {
+            case let .success(imageResult):
+                let downloadedImage = imageResult.image
+                completion(downloadedImage)
+            case let .failure(error):
+                print("Error: failed to download the image \(error)")
+            }
+        }
     }
 }
